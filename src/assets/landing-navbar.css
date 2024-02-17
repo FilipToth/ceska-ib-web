@@ -1,0 +1,145 @@
+.navbar-wrapper {
+    /* navbar */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 67px;
+
+    position: absolute;
+    width: 1242px;
+    height: 86px;
+    left: calc(50% - 1242px/2);
+    top: 0px;
+}
+
+.navbar {
+    /* nav-bar */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 93px;
+    gap: 50px;
+
+    width: 957px;
+    height: 49px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.navbar-text {
+    /* About Us */
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.85);
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.ib-logo-spacer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ib-logo-wrapper {
+    /* IB-Logo-BG-Wrapper */
+    width: 70px;
+    height: 70px;
+
+    background: #FFFFFF;
+    border-radius: 1000px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.ib-logo {
+    /* ib-logo */
+
+    width: 70px;
+    height: 70px;
+
+    background: url(ib-world-school-logo-2-colour.png);
+    border-radius: 9px;
+}
+
+.language-picker-wrapper {
+    /* language-picker-wrapper */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 9px;
+    gap: 3px;
+
+    width: 71px;
+    height: 37px;
+
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.flag {
+    /* flag */
+
+    width: 25px;
+    height: 25px;
+    border-radius: 1000px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.language-text {
+    /* text */
+
+    width: 25px;
+    height: 21px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

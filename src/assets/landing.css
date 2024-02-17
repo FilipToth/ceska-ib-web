@@ -1,0 +1,82 @@
+.landing-1-wrapper {
+    /* landing */
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    background: #F9F8F8;
+}
+
+.gradient-wrapper {
+    /* Rectangle 4 */
+
+    position:absolute;
+    width: 2038.78px;
+    height: 668.57px;
+    left: -140px;
+    top: -349.07px;
+
+    background: linear-gradient(92.43deg, #14B5EB 18.51%, #D226E1 51.06%);
+    transform: rotate(-13deg);
+}
+
+.info-wrapper {
+    /* Info-Wrapper */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+    isolation: isolate;
+
+    position: absolute;
+    max-width: 908px;
+    left: 186px;
+    top: 242px;
+}
+
+.gradient-text {
+    /* A World-class Curriculum for the Next Generation of Leaders */
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 76px;
+    line-height: 87px;
+
+    background: linear-gradient(114.71deg, rgba(0, 0, 0, 0.52) 18.07%, rgba(0, 0, 0, 0.52) 18.08%, rgba(0, 0, 0, 0.8) 63.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    z-index: 0;
+}
+
+.gradient-about-text {
+    /* The IB Diploma Programme molds leaders through rigorous academics, critical thinking, and social responsibility, preparing students for a connected world with confidence and empathy. */
+
+    max-width: 506px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #5F5F5F;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+}
