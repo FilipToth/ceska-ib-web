@@ -8,6 +8,15 @@
     background: #F9F8F8;
 }
 
+#gradient-canvas {
+    width:100%;
+    height:100%;
+    --gradient-color-1: #14b5eb;
+    --gradient-color-2: #d226e1;
+    --gradient-color-3: #9141ac;
+    --gradient-color-4: #b9beff;
+  }
+
 .gradient-wrapper {
     /* Rectangle 4 */
 
@@ -17,7 +26,7 @@
     left: -140px;
     top: -349.07px;
 
-    background: linear-gradient(92.43deg, #14B5EB 18.51%, #D226E1 51.06%);
+    /* background: linear-gradient(92.43deg, #14B5EB 18.51%, #D226E1 51.06%); */
     transform: rotate(-13deg);
 }
 
