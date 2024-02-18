@@ -3,11 +3,19 @@ import "assets/landing-navbar.css"
 import flag from 'assets/un_flag.webp'
 import logo from 'assets/ib-world-school-logo-2-colour.png'
 import EngagedButton from "components/engagedButton"
+import { Gradient } from "assets/gradient"
+import { useEffect } from "react"
 
 const LandingPage = () => {
+
+    useEffect(() => {
+        const gradient = new Gradient();
+        gradient.initGradient("#gradient-canvas");
+    }, []);
+
     return (
         <div className="landing-1-wrapper">
-            <canvas className="gradient-wrapper" id="gradient-canvas" data-transition-in></canvas>
+            <canvas id="gradient-canvas" width="203" data-transition-in data-js-darken-top></canvas>
             <div className="navbar-wrapper">
                 <div className="ib-logo-spacer" >
                     <div className="ib-logo-wrapper">

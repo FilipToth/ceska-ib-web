@@ -1,7 +1,7 @@
 .landing-1-wrapper {
     /* landing */
 
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
 
@@ -9,25 +9,19 @@
 }
 
 #gradient-canvas {
-    width:100%;
-    height:100%;
-    --gradient-color-1: #14b5eb;
-    --gradient-color-2: #d226e1;
-    --gradient-color-3: #9141ac;
-    --gradient-color-4: #b9beff;
-  }
-
-.gradient-wrapper {
-    /* Rectangle 4 */
-
-    position:absolute;
-    width: 2038.78px;
-    height: 668.57px;
-    left: -140px;
+    position:relative;
+    width: 2039px;
+    height: 669px;
+    left: -110px;
     top: -349.07px;
 
     /* background: linear-gradient(92.43deg, #14B5EB 18.51%, #D226E1 51.06%); */
     transform: rotate(-13deg);
+
+    --gradient-color-1: #14b5eb;
+    --gradient-color-2: #d226e1;
+    --gradient-color-3: #9141ac;
+    --gradient-color-4: #b9beff;
 }
 
 .info-wrapper {
