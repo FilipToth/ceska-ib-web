@@ -6,11 +6,9 @@
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 67px;
+    gap: 20px;
 
     position: absolute;
-    width: 1242px;
-    height: 86px;
     left: calc(50% - 1242px/2);
     top: 0px;
 }
@@ -23,7 +21,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 14px 93px;
+    padding: 14px 0px;
     gap: 50px;
 
     width: 957px;

@@ -1,0 +1,123 @@
+.landing-subpage-layout {
+    /* subpage-layout */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:stretch;
+    padding: 0px 5px;
+    gap: 147px;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: 155px;
+    top: 0px;
+}
+
+.landing-subpage-left-wrapper {
+    /* Frame 11 */
+    position: relative;
+    width: 640px;
+    height: 100vh;
+}
+
+.landing-subpage-heading {
+    /* An education like no other! */
+
+    max-width: 613px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 110px;
+    margin: 0px;
+
+    background: linear-gradient(114.71deg, rgba(0, 0, 0, 0.52) 18.07%, rgba(0, 0, 0, 0.52) 18.08%, rgba(0, 0, 0, 0.8) 63.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.landing-subpage-subheading {
+    /* Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di */
+
+    width: 512px;
+    height: 63px;
+
+    margin: 0px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #5F5F5F;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.landing-subpage-left-text-wrapper {
+    /* left-text-wrapper */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 5px;
+    gap: 25px;
+
+    position: absolute;
+    max-width: 623px;
+    left: 0px;
+    top: 237px;
+}
+
+.landing-subpage-right-wrapper {
+    /* right-wrapper */
+
+    width: 795px;
+    height: 705px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.center-cell-wrapper {
+    /* Frame 14 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 8px;
+
+    position: relative;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - 160px/2 + 2.5px);
+    top: calc(50% - 160px/2 + 38.5px);
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
