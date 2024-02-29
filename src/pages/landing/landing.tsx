@@ -16,7 +16,7 @@ const LandingPage = () => {
     return (
         <>
             <div className="landing-wrapper">
-                <canvas id="gradient-canvas" width="203" data-transition-in data-js-darken-top></canvas>
+            <canvas id="gradient-canvas" width="203" data-transition-in data-js-darken-top></canvas>
                 <div className="navbar-wrapper">
                     <div className="ib-logo-spacer" >
                         <div className="ib-logo-wrapper">
@@ -35,10 +35,13 @@ const LandingPage = () => {
                         <h1 className="language-text">EN</h1>
                     </div>
                 </div>
-                <div className="info-wrapper">
-                    <p className="gradient-text">A World-class Curriculum for the Next Generation of Leaders</p>
-                    <p className="gradient-about-text">The IB Diploma Programme molds leaders through rigorous academics, critical thinking, and social responsibility, preparing students for a connected world with confidence and empathy.</p>
-                    <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
+                <div className="top-info-align-wrapper">
+                    <div className="info-wrapper">
+                        <p className="gradient-text">A World-class Curriculum for the Next Generation of Leaders</p>
+                        <p className="gradient-about-text">The IB Diploma Programme molds leaders through rigorous academics, critical thinking, and social responsibility, preparing students for a connected world with confidence and empathy.</p>
+                        <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
+                    </div>
+                    <p1>kqwuaw,ljdfn;ajkwnfck;janksjjnd</p1>
                 </div>
             </div>
 {/*             <div className="landing-wrapper">
