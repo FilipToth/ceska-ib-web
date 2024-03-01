@@ -13,6 +13,8 @@
     width: 100vw;
     left: 0;
     top: 0px;
+
+    z-index: 1;
 }
 
 .navbar {
@@ -100,12 +102,17 @@
     line-height: 28px;
     /* identical to box height */
 
-    color: rgba(255, 255, 255, 0.85);
+    transition: 0.3s ease-in;
 
     /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-text:hover {
+    color: rgba(200, 200, 200, 1);
 }
 
 .ib-logo-spacer {

@@ -10,26 +10,31 @@
 
     background: linear-gradient(94.3deg, #14B5EB 2.57%, #D226E1 96.94%);
     border-radius: 15px;
+
+    transition: 0.4s ease-in-out;
 }
 
 .engaged-button-text {
     /* uygug */
-
-    width: 109px;
-    height: 21px;
 
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
+    text-align: center;
     /* identical to box height */
 
     color: #FFFFFF;
-
 
     /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
+
+    transition: 0.4s ease-in-out;
+}
+
+.engaged-button:hover {
+    border-radius: 30px;
 }
