@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-bottom-wrapper">
-                    <p className="school-name-text">© 2024 Sukromne Bilyngvalne Gymnazium Ceska 10</p>
+                    <p className="school-name-text">© 2024 Sukromne Bilingvalne Gymnazium Ceska 10</p>
                     <div className="footer-bottom-right-wrapper">
                         <div className="school-logo-wrapper">
                             <img className="school-logo" src={schoolLogo}></img>

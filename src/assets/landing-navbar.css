@@ -140,8 +140,53 @@
     width: 70px;
     height: 70px;
 
-    background: url(ib-world-school-logo-2-colour.png);
     border-radius: 9px;
+}
+
+.navbar-dropdown-wrapper {
+    position: absolute;
+    max-width: 400px;
+    padding: 10px 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.dropdown-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4px 4px;
+    margin: 0;
+}
+
+.dropdown-item-image {
+    background-color: aqua;
+    width: 36px;
+    height: 36px;
+}
+
+.dropdown-item-name {
+    /* Math AI */
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #000000;
 }
 
 @media all and (max-width: 1150px) {
