@@ -48,24 +48,20 @@ const LandingPage = () => {
             </div>
             <div className="landing-wrapper">
                 <div className="landing-subpage-layout">
-                    <div>
-                        <div className="landing-subpage-left-wrapper">
-                            <p className="landing-subpage-heading">An education like no other!</p>
-                            <p className="landing-subpage-subheading">Lorem pahfujbaouifhiaebfo aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di</p>
-                            <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
-                        </div>
+                    <div className="landing-subpage-left-wrapper">
+                        <p className="landing-subpage-heading">An education like no other!</p>
+                        <p className="landing-subpage-subheading">Lorem pahfujbaouifhiaebfo aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di</p>
+                        <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
                     </div>
                     <canvas className="landing-subpage-animation-canvas" width={600} height={600}></canvas>
                 </div>
             </div>
             <div className="landing-wrapper">
                 <div className="landing-subpage-layout">
-                    <div>
-                        <div className="landing-subpage-left-wrapper">
-                            <p className="landing-subpage-heading">Why Ceska?</p>
-                            <p className="landing-subpage-subheading">Lorem pahfujbaouifhiaebfo aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di</p>
-                            <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
-                        </div>
+                    <div className="landing-subpage-left-wrapper">
+                        <p className="landing-subpage-heading">Why Ceska?</p>
+                        <p className="landing-subpage-subheading">Lorem pahfujbaouifhiaebfo aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di</p>
+                        <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
                     </div>
                     <canvas className="landing-subpage-animation-canvas" width={600} height={600}></canvas>
                 </div>

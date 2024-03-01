@@ -8,7 +8,7 @@
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
     background: linear-gradient(89.83deg, #14B5EB 3.77%, #D226E1 92.26%);
 
-    padding-top: 10vh;
+    padding-top: 12vh;
 
     height: auto;
     width: 100vw;
@@ -25,8 +25,11 @@
     margin-left: 10%;
     margin-right: 10%;
     padding-bottom: 5vh;
+    column-gap: clamp(20px, 10vw, 10vw);
+    row-gap: clamp(20px, 10vw, 10vw);
 
-    width: 80%;
+    width: auto;
+    height: auto;
 }
 
 .footer-content-group {
@@ -59,20 +62,22 @@
 .footer-bottom-right-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 1vw;
 }
 
 .school-logo-wrapper {
     background-color: #FFFFFF;
     border-radius: 20px;
-    height: 4vw;
-    width: 11.86vw;
+    height: clamp(46px, 4vw, 4vw);
+    width: clamp(136px, 11.86vw, 4vw);
     padding: 0.5vw 0.5vw;
 }
 
 .school-logo {
-    height: 4vw;
-    width: 11.86vw;
+    height: 100%;
+    width: 100%;
 }
 
 .school-name-text {
@@ -83,4 +88,12 @@
     font-weight: 700;
     font-size: clamp(8px, 2vw + 0.1rem, 16px);
     color: white;
+}
+
+@media all and (max-width: 846px) {
+    .footer-content-wrapper {
+        column-gap: 30vw;
+        row-gap: clamp(20px, 10vw, 10vw);
+        width: auto;
+    }
 }
