@@ -71,8 +71,9 @@
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(8px, 2vw + 0.1rem, 18px);
+    font-size: clamp(8px, 4vw + 0.1rem, 18px);
     line-height: 21px;
+    padding: 0 5px;
     /* identical to box height */
     display: flex;
     align-items: center;
