@@ -55,7 +55,7 @@ const LandingPage = () => {
                             <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
                         </div>
                     </div>
-                    <canvas width={600} height={600}></canvas>
+                    <canvas className="landing-subpage-animation-canvas" width={600} height={600}></canvas>
                 </div>
             </div>
             <div className="landing-wrapper">
@@ -67,7 +67,7 @@ const LandingPage = () => {
                             <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
                         </div>
                     </div>
-                    <canvas width={600} height={600}></canvas>
+                    <canvas className="landing-subpage-animation-canvas" width={600} height={600}></canvas>
                 </div>
             </div>
             <div className="footer-page-wrapper">
