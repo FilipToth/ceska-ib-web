@@ -2,6 +2,7 @@ import "assets/mobile-navbar.css"
 import closeImg from "assets/close.svg"
 import hamburger from "assets/hamburger.svg"
 import rightArrow from "assets/right-arrow.svg"
+import leftArrow from "assets/left-arrow.svg"
 import IbLogo from "components/ibLogo";
 import { useState } from "react";
 import { DropdownEntry, aboutUsItems, regularItems } from "./navbarLinks";
@@ -30,6 +31,7 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
     };
 
     let [state, setState] = useState(initialState);
+
     const itemClick = (text: string) => {
         const newState: ExpandedNavbarState = {
             isAboutUs: false,
@@ -44,6 +46,22 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
                 newState.isAboutUs = true;
 
             newState.subcategory = text;
+        }
+
+        setState(newState);
+    };
+
+    const back = () => {
+        const newState: ExpandedNavbarState = {
+            isAboutUs: false,
+            isTopmost: false,
+            subcategory: undefined
+        };
+
+        if ((state.isAboutUs && state.subcategory == null) || (!state.isAboutUs && state.subcategory != null)) {
+            newState.isTopmost = true;
+        } else if (state.isAboutUs && state.subcategory != null) {
+            newState.isAboutUs = true;
         }
 
         setState(newState);
@@ -103,6 +121,7 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
     return (
         <div className="expanded-navbar-wrapper">
             <div className="expanded-navbar-top-wrapper">
+                { !state.isTopmost && <img src={leftArrow} onClick={back} className="expanded-navbar-close-image"></img> }
                 <img src={closeImg} onClick={close} className="expanded-navbar-close-image"></img>
             </div>
             <div className={bottomWrapperClass}>
