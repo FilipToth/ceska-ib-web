@@ -4,10 +4,10 @@
     /* Auto layout */
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     padding: 0px;
-    gap: 20px;
+    gap: 10px;
 
     position: absolute;
     width: 100vw;
@@ -24,14 +24,24 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 5px 10px;
-    gap: 50px;
 
     /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+.navbar-item-wrapper {
+    height: 100px;
+    padding: 0 25px;
+    margin: 0
+
+    /* This is done so this box
+       overlaps with the dropdown,
+       that way we can catch the
+       on mouse enter events  */
 }
 
 .language-picker-wrapper {
@@ -145,19 +155,25 @@
 
 .navbar-dropdown-wrapper {
     position: absolute;
-    max-width: 400px;
-    padding: 10px 10px;
+    max-width: 450px;
+    width: fit-content;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    overflow-x: hidden;
 
     background-color: white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-dropdown-wrapper-padding {
+    padding: 10px 10px;
 }
 
 .dropdown-item-wrapper {
@@ -168,6 +184,10 @@
 
     padding: 4px 4px;
     margin: 0;
+}
+
+.dropdown-item-wrapper:hover {
+    cursor: pointer;
 }
 
 .dropdown-item-image {
@@ -187,6 +207,63 @@
     text-align: center;
 
     color: #000000;
+}
+
+.navbar-dropdown-complex-link-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 300px;
+    gap: 10px;
+}
+
+.navbar-dropdown-subcategory-selector-wrappers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100px;
+
+    background-color: #c7d2da;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    position: relative;
+    align-self: stretch;
+}
+
+.complex-dropdown-subcategory-wrapper {
+    max-width: 120px;
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s ease-in-out;
+}
+
+.complex-dropdown-subcategory-wrapper:hover {
+    background-color: white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+}
+
+.complex-dropdown-subcategory-wrapper-selected {
+    background-color: white;
+}
+
+.complex-dropdown-subcategory-text {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+    text-align: center;
 }
 
 @media all and (max-width: 1150px) {

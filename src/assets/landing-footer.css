@@ -51,6 +51,10 @@
 }
 
 .footer-content-text:hover {
+    cursor: pointer;
+}
+
+.footer-content-text:hover {
     color: rgb(200, 200, 200, 1);
 }
 

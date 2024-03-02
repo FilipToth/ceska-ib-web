@@ -1,10 +1,11 @@
 import "assets/landing-1.css"
 import "assets/landing-2.css"
+import whyCeska from "assets/why-ceska.svg"
 import EngagedButton from "components/engagedButton"
 import { Gradient } from "assets/gradient"
 import { useEffect } from "react"
 import Footer from "./footer"
-import Navbar from "./navbar"
+import Navbar from "components/navbar/navbar"
 
 const LandingPage = () => {
     useEffect(() => {
@@ -43,7 +44,7 @@ const LandingPage = () => {
                         <p className="landing-subpage-subheading">Lorem pahfujbaouifhiaebfo aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di</p>
                         <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
                     </div>
-                    <canvas className="landing-subpage-animation-canvas" width={600} height={600}></canvas>
+                    <img className="landing-subpage-animation-canvas" src={whyCeska}></img>
                 </div>
             </div>
             <Footer />

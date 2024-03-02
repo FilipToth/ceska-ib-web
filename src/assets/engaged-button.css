@@ -14,6 +14,10 @@
     transition: 0.4s ease-in-out;
 }
 
+.engaged-button:hover {
+    cursor: pointer;
+}
+
 .engaged-button-text {
     /* uygug */
 
