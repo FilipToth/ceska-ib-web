@@ -75,4 +75,4 @@ const regularItems: { [category: string]: DropdownEntry[] } = {
     ]
 };
 
-export { aboutUsItems, regularItems };
+export { aboutUsItems, regularItems, type DropdownEntry };

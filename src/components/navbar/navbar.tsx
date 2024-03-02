@@ -3,19 +3,7 @@ import flag from 'assets/un_flag.webp'
 import { useState } from "react";
 import { aboutUsItems, regularItems } from "./navbarLinks";
 import IbLogo from "components/ibLogo";
-
-const open = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-};
-
-const DropdownItem = ({ text, redirect }: { text: string, redirect: string }) => {
-    return (
-        <div className="dropdown-item-wrapper" onClick={() => { open(redirect) }}>
-            <img className="dropdown-item-image"></img>
-            <p className="dropdown-item-name">{text}</p>
-        </div>
-    );
-};
+import DropdownItem from "./dropdownItem";
 
 const DropdownMenu = ({ text, enter, leave }: { text: string, enter: () => void, leave: () => void }) => {
     var items = regularItems[text];
@@ -119,15 +107,20 @@ const NavbarItem = ({ text }: { text: string }) => {
 };
 
 const Navbar = () => {
+    const keys = Object.keys(regularItems);
+    keys.splice(0, 0, "About Us");
+
+    const elements: JSX.Element[] = [];
+    keys.forEach((key) => {
+        const element = <NavbarItem text={key} />
+        elements.push(element);
+    });
+
     return (
         <div className="navbar-wrapper">
             <IbLogo />
             <div className="navbar">
-                <NavbarItem text="About Us" />
-                <NavbarItem text="Apply Now" />
-                <NavbarItem text="For Students" />
-                <NavbarItem text="For Parents" />
-                <NavbarItem text="Events" />
+                {elements}
             </div>
             <div className="language-picker-wrapper">
                 <img className="flag" src={flag}></img>

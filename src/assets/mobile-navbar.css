@@ -52,12 +52,25 @@
 
 .expanded-navbar-bottom-wrapper {
     height: 100%;
+}
 
+.expanded-navbar-bottom-wrapper-subcategories-layout {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     gap: 25px;
+}
+
+.expanded-navbar-bottom-wrapper-links-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
 }
 
 .expanded-navbar-item-wrapper {
@@ -67,6 +80,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .expanded-navbar-item-text {
