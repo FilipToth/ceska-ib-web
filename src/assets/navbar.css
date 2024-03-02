@@ -35,7 +35,7 @@
 
 .navbar-item-wrapper {
     height: 100px;
-    padding: 0 25px;
+    padding: 0 clamp(4px, 1vw, 25px);
     margin: 0
 
     /* This is done so this box
@@ -123,34 +123,6 @@
 
 .navbar-text:hover {
     color: rgba(200, 200, 200, 1);
-}
-
-.ib-logo-spacer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.ib-logo-wrapper {
-    /* IB-Logo-BG-Wrapper */
-    width: 70px;
-    height: 70px;
-
-    background: #FFFFFF;
-    border-radius: 1000px;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.ib-logo {
-    /* ib-logo */
-
-    width: 70px;
-    height: 70px;
-
-    border-radius: 9px;
 }
 
 .navbar-dropdown-wrapper {
@@ -269,10 +241,6 @@
 @media all and (max-width: 1150px) {
     .navbar-wrapper {
         gap: 0px;
-    }
-
-    .navbar {
-        gap: 3vw;
     }
 }
 

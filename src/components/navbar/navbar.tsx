@@ -1,84 +1,8 @@
-import "assets/landing-navbar.css"
+import "assets/navbar.css"
 import flag from 'assets/un_flag.webp'
-import ibLogo from 'assets/ib-world-school-logo-2-colour.png'
-import { useEffect, useState } from "react";
-
-interface DropdownEntry {
-    text: string;
-    redirect: string;
-}
-
-const aboutUsItems: { [subCategory: string]: DropdownEntry[] } = {
-    "Subjects": [
-        { text: "Math HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "Slovek Ejch El", redirect: "/src/assets/un_flag.webp" },
-        { text: "Math HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "Math HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "Math HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "Math HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "Math HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "Math HL", redirect: "/src/assets/un_flag.webp" },
-    ],
-    "Other Thimgamajig": [
-        { text: "Woof Woof", redirect: "/src/assets/un_flag.webp" },
-        { text: "Woof Woof", redirect: "/src/assets/un_flag.webp" },
-        { text: "Woof Woof", redirect: "/src/assets/un_flag.webp" },
-        { text: "Woof Woof", redirect: "/src/assets/un_flag.webp" },
-        { text: "Woof Woof", redirect: "/src/assets/un_flag.webp" },
-        { text: "Woof Woof", redirect: "/src/assets/un_flag.webp" },
-    ],
-    "Thiccc": [
-        { text: "HAHJKHJDN HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "HAHJKHJDN HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "HAHJKHJDN HL", redirect: "/src/assets/un_flag.webp" },
-        { text: "HAHJKHJDN HL", redirect: "/src/assets/un_flag.webp" },
-    ]
-};
-
-const regularItems: { [category: string]: DropdownEntry[] } = {
-    "Apply Now": [
-        { text: "Apply", redirect: "/src/assets/un_flag.webp" },
-        { text: "Apply", redirect: "/src/assets/un_flag.webp" },
-        { text: "Apply", redirect: "/src/assets/un_flag.webp" },
-        { text: "Apply", redirect: "/src/assets/un_flag.webp" },
-        { text: "Apply", redirect: "/src/assets/un_flag.webp" },
-    ],
-    "For Students": [
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-        { text: "Student Resource", redirect: "/src/assets/un_flag.webp" },
-    ],
-    "For Parents": [
-        { text: "Parent Thing", redirect: "/src/assets/un_flag.webp" },
-        { text: "Parent Thing", redirect: "/src/assets/un_flag.webp" },
-        { text: "Parent Thing", redirect: "/src/assets/un_flag.webp" },
-        { text: "Parent Thing", redirect: "/src/assets/un_flag.webp" },
-        { text: "Parent Thing", redirect: "/src/assets/un_flag.webp" },
-        { text: "Parent Thing", redirect: "/src/assets/un_flag.webp" },
-    ],
-    "Events": [
-        { text: "A BORING EVENT", redirect: "/src/assets/un_flag.webp" },
-        { text: "A BORING EVENT", redirect: "/src/assets/un_flag.webp" },
-        { text: "A BORING EVENT", redirect: "/src/assets/un_flag.webp" },
-        { text: "A BORING EVENT", redirect: "/src/assets/un_flag.webp" },
-        { text: "A BORING EVENT", redirect: "/src/assets/un_flag.webp" },
-        { text: "A BORING EVENT", redirect: "/src/assets/un_flag.webp" },
-    ]
-};
+import { useState } from "react";
+import { aboutUsItems, regularItems } from "./navbarLinks";
+import IbLogo from "components/ibLogo";
 
 const open = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -176,12 +100,10 @@ const NavbarItem = ({ text }: { text: string }) => {
 
     const dropdownEnter = () => {
         setMouseInDropdown(true);
-        console.log('true');
     };
 
     const dropdownLeave = () => {
         setMouseInDropdown(false);
-        console.log('false');
     };
 
     const render = mouseInDropdown || mouseInNavbar;
@@ -199,11 +121,7 @@ const NavbarItem = ({ text }: { text: string }) => {
 const Navbar = () => {
     return (
         <div className="navbar-wrapper">
-            <div className="ib-logo-spacer" >
-                <div className="ib-logo-wrapper">
-                    <img className="ib-logo" src={ibLogo}></img>
-                </div>
-            </div>
+            <IbLogo />
             <div className="navbar">
                 <NavbarItem text="About Us" />
                 <NavbarItem text="Apply Now" />

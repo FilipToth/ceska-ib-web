@@ -1,6 +1,6 @@
 import "assets/landing-footer.css"
 import schoolLogo from 'assets/school-logo.png'
-import ibLogo from 'assets/ib-world-school-logo-2-colour.png'
+import IbLogo from "components/ibLogo"
 
 const Footer = () => {
     return (
@@ -38,11 +38,7 @@ const Footer = () => {
                         <div className="school-logo-wrapper">
                             <img className="school-logo" src={schoolLogo}></img>
                         </div>
-                        <div className="ib-logo-spacer" >
-                            <div className="ib-logo-wrapper">
-                                <img className="ib-logo" src={ibLogo}></img>
-                            </div>
-                        </div>
+                        <IbLogo />
                     </div>
                 </div>
             </div>

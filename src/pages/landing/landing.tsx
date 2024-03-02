@@ -6,6 +6,8 @@ import { Gradient } from "assets/gradient"
 import { useEffect } from "react"
 import Footer from "./footer"
 import Navbar from "components/navbar/navbar"
+import { useMediaQuery } from "react-responsive"
+import MobileNavbar from "components/navbar/mobileNavbar"
 
 const LandingPage = () => {
     useEffect(() => {
@@ -13,11 +15,13 @@ const LandingPage = () => {
         gradient.initGradient("#gradient-canvas");
     }, []);
 
+    const isMobileNavbar = useMediaQuery({ query: "(max-width: 600px)" });
     return (
         <>
             <div className="landing-wrapper">
                 <canvas id="gradient-canvas" width="203" data-transition-in data-js-darken-top></canvas>
-                <Navbar />
+                { !isMobileNavbar && <Navbar /> }
+                { isMobileNavbar && <MobileNavbar /> }
                 <div className="top-info-align-wrapper">
                     <div className="info-wrapper">
                         <p className="gradient-text">A World-class Curriculum for the Next Generation of Leaders</p>
