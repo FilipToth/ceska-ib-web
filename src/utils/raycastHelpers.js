@@ -1,5 +1,14 @@
 import * as THREE from 'three';
 
+const getFirstIntersection = (ev, canvas, cam, raycaster, scene) => {
+    const pointer = getMouseVector2(ev, canvas);
+    if (pointer == undefined)
+        return undefined;
+
+    const intersection = checkRayIntersections(pointer, cam, raycaster, scene, true);
+    return intersection; // can be undefined :D
+};
+
 const getMouseVector2 = (event, canvas) => {
     let mousePointer = new THREE.Vector2();
 
@@ -34,4 +43,4 @@ const checkRayIntersections = (mousePointer, camera, raycaster, scene, getFirstV
     return intersections;
 };
 
-export { getMouseVector2, checkRayIntersections };
+export { getMouseVector2, checkRayIntersections, getFirstIntersection };

@@ -4,7 +4,27 @@ import * as THREE from "three";
 import * as TWEEN from '@tweenjs/tween.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { checkRayIntersections, getMouseVector2 } from "../../utils/raycastHelpers";
+import { getFirstIntersection } from "../../utils/raycastHelpers";
+import { redirect } from "../../utils/helpers"
+
+const redirects = {
+    "001": "/src/assets/un_flag.webp",
+    "002": "/src/assets/un_flag.webp",
+    "003": "/src/assets/un_flag.webp",
+};
+
+const getIDFromMeshName = (name) => {
+    let id = "";
+    if (name.length == 7) {
+        // TextXXX
+        id = name.substring(4, 7);
+    } else {
+        // CircleXXX
+        id = name.substring(6, 9)
+    }
+
+    return id;
+};
 
 const Triangle = () => {
     const canvasRef = useRef(null);
@@ -92,29 +112,15 @@ const Triangle = () => {
         };
 
         const onMouseMove = (e) => {
-            const pointer = getMouseVector2(e, canvasRef.current);
-            if (pointer == undefined) {
+            const intersection = getFirstIntersection(e, canvasRef.current, camera, raycaster, scene);
+            if (intersection == undefined) {
                 cancelAllAnims();
                 return;
             }
 
-            const intersections = checkRayIntersections(pointer, camera, raycaster, scene, true);
-            if (intersections == undefined) {
-                cancelAllAnims();
-                return;
-            }
-
-            const hitObj = intersections.object;
+            const hitObj = intersection.object;
             const name = hitObj.name;
-
-            let id = "";
-            if (name.length == 7) {
-                // TextXXX
-                id = name.substring(4, 7);
-            } else {
-                // CircleXXX
-                id = name.substring(6, 9)
-            }
+            const id = getIDFromMeshName(name);
 
             const circle = scene.getObjectByName(`Circle${id}`);
             const text = scene.getObjectByName(`Text${id}`);
@@ -149,7 +155,21 @@ const Triangle = () => {
             ];
         };
 
+        const onClick = (e) => {
+            const intersection = getFirstIntersection(e, canvasRef.current, camera, raycaster, scene);
+            if (intersection == undefined)
+                return;
+
+            const object = intersection.object;
+            const name = object.name;
+            const id = getIDFromMeshName(name);
+
+            const url = redirects[id];
+            redirect(url);
+        };
+
         document.addEventListener("mousemove", onMouseMove, false);
+        document.addEventListener("click", onClick);
 
         const animate = () => {
             requestAnimationFrame(animate);
