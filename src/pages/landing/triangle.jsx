@@ -168,8 +168,29 @@ const Triangle = () => {
             redirect(url);
         };
 
+        const onResize = () => {
+            const width = window.innerWidth;
+
+            // note: camera aspect always stays at 1
+
+            let size = 600;
+            if (width <= 600) {
+                // smaller width, still on right
+                size = 0.9 * width; // 90vw
+            } else if (width <= 1400) {
+                // mobile/tablet, on bottom
+                size = 0.38 * width; // 38vw
+            }
+
+            renderer.setSize(size, size);
+        };
+
         document.addEventListener("mousemove", onMouseMove, false);
         document.addEventListener("click", onClick);
+        window.addEventListener("resize", onResize, false);
+
+        // initial scale check
+        onResize();
 
         const animate = () => {
             requestAnimationFrame(animate);
@@ -182,7 +203,7 @@ const Triangle = () => {
     }, []);
 
     return (
-        <canvas id="cube-view" className="cube-canvas" ref={canvasRef}></canvas>
+        <canvas className="triangle-canvas" ref={canvasRef}></canvas>
     );
 };
 

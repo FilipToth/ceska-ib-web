@@ -1,18 +1,18 @@
-.cube-canvas {
+.triangle-canvas {
     width: 600px;
     height: 600px;
     background-color: aqua;
 }
 
 @media all and (max-width: 1400px) {
-    .cube-canvas {
+    .triangle-canvas {
         width: 38vw;
         height: 38vw;
     }
 }
 
 @media all and (max-width: 600px) {
-    .cube-canvas {
+    .triangle-canvas {
         width: 90vw;
         height: 90vw;
     }
