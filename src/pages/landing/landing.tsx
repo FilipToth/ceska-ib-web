@@ -8,6 +8,7 @@ import Footer from "./footer"
 import Navbar from "components/navbar/navbar"
 import { useMediaQuery } from "react-responsive"
 import MobileNavbar from "components/navbar/mobileNavbar"
+import Triangle from "./triangle"
 
 const LandingPage = () => {
     useEffect(() => {
@@ -28,7 +29,7 @@ const LandingPage = () => {
                         <p className="gradient-about-text">The IB Diploma Programme molds leaders through rigorous academics, critical thinking, and social responsibility, preparing students for a connected world with confidence and empathy.</p>
                         <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
                     </div>
-                    <p>     wpiefj    Three.js Animation       </p>
+                   <Triangle />
                 </div>
             </div>
             <div className="landing-wrapper">

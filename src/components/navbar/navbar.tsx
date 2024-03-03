@@ -10,7 +10,7 @@ const DropdownMenu = ({ text, enter, leave }: { text: string, enter: () => void,
     const elements: JSX.Element[] = [];
 
     items.forEach((item) => {
-        const element = <DropdownItem text={item.text} redirect={item.redirect} />
+        const element = <DropdownItem text={item.text} redirect={item.redirect} textColor="black" />
         elements.push(element);
     });
 
@@ -49,7 +49,7 @@ const ComplexDropdownMenu = ({ enter, leave }: { enter: () => void, leave: () =>
     const itemsForCategory = aboutUsItems[category]
     const dropDownElements: JSX.Element[] = [];
     itemsForCategory.forEach((item) => {
-        const element = <DropdownItem text={item.text} redirect={item.redirect} />
+        const element = <DropdownItem text={item.text} redirect={item.redirect} textColor="black" />
         dropDownElements.push(element);
     });
 

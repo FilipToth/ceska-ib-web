@@ -79,7 +79,7 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
 
     const addNavbarLinks = (links: DropdownEntry[]) => {
         links.forEach((link) => {
-            const element = <DropdownItem text={link.text} redirect={link.redirect} />
+            const element = <DropdownItem text={link.text} redirect={link.redirect} textColor="white" />
             elements.push(element);
         });
 
