@@ -8,9 +8,9 @@ import { getFirstIntersection } from "../../utils/raycastHelpers";
 import { redirect } from "../../utils/helpers"
 
 const redirects = {
-    "001": "/src/assets/un_flag.webp",
-    "002": "/src/assets/un_flag.webp",
-    "003": "/src/assets/un_flag.webp",
+    "001": "other/cas-handbook.pdf",
+    "002": "other/ee.pdf",
+    "003": "other/tok.pdf",
 };
 
 const getIDFromMeshName = (name) => {

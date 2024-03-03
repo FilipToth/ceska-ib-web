@@ -9,12 +9,17 @@ import Navbar from "components/navbar/navbar"
 import { useMediaQuery } from "react-responsive"
 import MobileNavbar from "components/navbar/mobileNavbar"
 import Triangle from "./triangle"
+import { redirect } from "utils/helpers"
 
 const LandingPage = () => {
     useEffect(() => {
         const gradient = new Gradient();
         gradient.initGradient("#gradient-canvas");
     }, []);
+
+    const aboutIBClick = () => {
+        redirect("other/what-is-ib.pdf");
+    };
 
     const isMobileNavbar = useMediaQuery({ query: "(max-width: 600px)" });
     return (
@@ -27,7 +32,7 @@ const LandingPage = () => {
                     <div className="info-wrapper">
                         <p className="gradient-text">A World-class Curriculum for the Next Generation of Leaders</p>
                         <p className="gradient-about-text">The IB Diploma Programme molds leaders through rigorous academics, critical thinking, and social responsibility, preparing students for a connected world with confidence and empathy.</p>
-                        <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
+                        <EngagedButton text={"About the IB"} onClick={() => { aboutIBClick() }} additionalStyle={ {'order': 2} }/>
                     </div>
                    <Triangle />
                 </div>

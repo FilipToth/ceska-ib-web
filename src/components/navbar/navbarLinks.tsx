@@ -43,7 +43,9 @@ const regularItems: { [category: string]: DropdownEntry[] } = {
     "IB Core": [
         { text: "CAS Handbook", redirect: "other/cas-handbook.pdf" },
         { text: "TOK", redirect: "other/tok.pdf" },
-        { text: "EE", redirect: "other/ee.pdf" }
+        { text: "EE", redirect: "other/ee.pdf" },
+        { text: "History of the IB", redirect: "other/ib-history.pdf" },
+        { text: "What is an IB Education", redirect: "other/what-is-ib.pdf" }
     ]
 };
 
