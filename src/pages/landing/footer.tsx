@@ -1,6 +1,6 @@
 import "assets/landing-footer.css"
-import schoolLogo from 'assets/school-logo.png'
 import IbLogo from "components/ibLogo"
+import SchoolLogo from "components/schoolLogo";
 
 const Footer = () => {
     return (
@@ -35,9 +35,7 @@ const Footer = () => {
                 <div className="footer-bottom-wrapper">
                     <p className="school-name-text">© 2024 Sukromne Bilingvalne Gymnazium Ceska 10</p>
                     <div className="footer-bottom-right-wrapper">
-                        <div className="school-logo-wrapper">
-                            <img className="school-logo" src={schoolLogo}></img>
-                        </div>
+                        <SchoolLogo style={undefined} />
                         <IbLogo />
                     </div>
                 </div>

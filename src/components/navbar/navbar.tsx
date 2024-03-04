@@ -4,13 +4,14 @@ import { useState } from "react";
 import { subjectsItems, regularItems } from "./navbarLinks";
 import IbLogo from "components/ibLogo";
 import DropdownItem from "./dropdownItem";
+import SchoolLogo from "components/schoolLogo";
 
 const DropdownMenu = ({ text, enter, leave }: { text: string, enter: () => void, leave: () => void }) => {
     var items = regularItems[text];
     const elements: JSX.Element[] = [];
 
     items.forEach((item) => {
-        const element = <DropdownItem text={item.text} url={item.redirect} textColor="black" />
+        const element = <DropdownItem text={item.text} url={item.redirect} icon={item.icon} textColor="black" />
         elements.push(element);
     });
 
@@ -49,7 +50,7 @@ const ComplexDropdownMenu = ({ enter, leave }: { enter: () => void, leave: () =>
     const itemsForCategory = subjectsItems[category]
     const dropDownElements: JSX.Element[] = [];
     itemsForCategory.forEach((item) => {
-        const element = <DropdownItem text={item.text} url={item.redirect} textColor="black" />
+        const element = <DropdownItem text={item.text} url={item.redirect} icon={item.icon} textColor="black" />
         dropDownElements.push(element);
     });
 

@@ -77,19 +77,6 @@
     gap: 1vw;
 }
 
-.school-logo-wrapper {
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    height: clamp(46px, 4vw, 4vw);
-    width: clamp(136px, 11.86vw, 11.86vw);
-    padding: 0.5vw 0.5vw;
-}
-
-.school-logo {
-    height: 100%;
-    width: 100%;
-}
-
 .school-name-text {
     margin: 0 0;
 
