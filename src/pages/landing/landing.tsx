@@ -1,6 +1,7 @@
 import "assets/landing-1.css"
 import "assets/landing-2.css"
 import whyCeska from "assets/why-ceska.svg"
+import ibDescription from "assets/ib-description.svg"
 import EngagedButton from "components/engagedButton"
 import { Gradient } from "assets/gradient"
 import { useEffect } from "react"
@@ -19,6 +20,10 @@ const LandingPage = () => {
 
     const aboutIBClick = () => {
         redirect("other/what-is-ib.pdf");
+    };
+
+    const ibHistoryClick = () => {
+        redirect("other/ib-history.pdf");
     };
 
     const isMobileNavbar = useMediaQuery({ query: "(max-width: 600px)" });
@@ -41,18 +46,17 @@ const LandingPage = () => {
                 <div className="landing-subpage-layout">
                     <div className="landing-subpage-left-wrapper">
                         <p className="landing-subpage-heading">An education like no other!</p>
-                        <p className="landing-subpage-subheading">Lorem pahfujbaouifhiaebfo aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di</p>
-                        <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
+                        <p className="landing-subpage-subheading">The IB Diploma program offers a comprehensive and globally recognized curriculum, fostering critical thinking and intercultural understanding. Through inquiry-based learning and community service, students develop essential skills for success in today's interconnected world. Graduates emerge as well-rounded individuals, equipped to tackle challenges with confidence and integrity. Joining the IB community opens doors to diverse opportunities for personal growth and academic excellence.</p>
+                        <EngagedButton text={"History of the IB"} onClick={() => { ibHistoryClick() }} additionalStyle={ {'order': 2} }/>
                     </div>
-                    <canvas className="landing-subpage-animation-canvas" width={600} height={600}></canvas>
+                    <img className="landing-subpage-animation-canvas" src={ibDescription}></img>
                 </div>
             </div>
             <div className="landing-wrapper">
                 <div className="landing-subpage-layout">
                     <div className="landing-subpage-left-wrapper">
                         <p className="landing-subpage-heading">Why Ceska?</p>
-                        <p className="landing-subpage-subheading">Lorem pahfujbaouifhiaebfo aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di Lorem pahfujbaouifhiaebfo ]aeoufhapoeujfpou jhbwjgdvbaojefpi hbwa09di</p>
-                        <EngagedButton text={"About the IB"} onClick={() => {}} additionalStyle={ {'order': 2} }/>
+                        <p className="landing-subpage-subheading">Sukromne Gymnazium Ceska offers tailored support and a nurturing environment for academic excellence. With experienced faculty and personalized attention, students develop essential skills for lifelong success. Join our collaborative community to excel academically and grow as well-rounded individuals prepared for the future.</p>
                     </div>
                     <img className="landing-subpage-animation-canvas" src={whyCeska}></img>
                 </div>
