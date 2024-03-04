@@ -5,7 +5,7 @@ import rightArrow from "assets/right-arrow.svg"
 import leftArrow from "assets/left-arrow.svg"
 import IbLogo from "components/ibLogo";
 import { useState } from "react";
-import { DropdownEntry, aboutUsItems, regularItems } from "./navbarLinks";
+import { DropdownEntry, subjectsItems, regularItems } from "./navbarLinks";
 import DropdownItem from "./dropdownItem";
 
 const ExpandedNavbarItem = ({ text, clicked }: { text: string, clicked: (category: string) => void }) => {
@@ -18,14 +18,15 @@ const ExpandedNavbarItem = ({ text, clicked }: { text: string, clicked: (categor
 };
 
 interface ExpandedNavbarState {
-    isAboutUs: boolean,
+    // we have a single complex dropdown...
+    isComplex: boolean,
     isTopmost: boolean,
     subcategory: string | undefined
 }
 
 const ExpandedNavbar = ({ close }: { close: () => void }) => {
     let initialState: ExpandedNavbarState = {
-        isAboutUs: false,
+        isComplex: false,
         isTopmost: true,
         subcategory: undefined
     };
@@ -34,16 +35,16 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
 
     const itemClick = (text: string) => {
         const newState: ExpandedNavbarState = {
-            isAboutUs: false,
+            isComplex: false,
             isTopmost: false,
             subcategory: undefined
         };
 
-        if (text == "About Us") {
-            newState.isAboutUs = true;
+        if (text == "Subjects") {
+            newState.isComplex = true;
         } else {
             if (!state.isTopmost)
-                newState.isAboutUs = true;
+                newState.isComplex = true;
 
             newState.subcategory = text;
         }
@@ -53,15 +54,15 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
 
     const back = () => {
         const newState: ExpandedNavbarState = {
-            isAboutUs: false,
+            isComplex: false,
             isTopmost: false,
             subcategory: undefined
         };
 
-        if ((state.isAboutUs && state.subcategory == null) || (!state.isAboutUs && state.subcategory != null)) {
+        if ((state.isComplex && state.subcategory == null) || (!state.isComplex && state.subcategory != null)) {
             newState.isTopmost = true;
-        } else if (state.isAboutUs && state.subcategory != null) {
-            newState.isAboutUs = true;
+        } else if (state.isComplex && state.subcategory != null) {
+            newState.isComplex = true;
         }
 
         setState(newState);
@@ -86,21 +87,21 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
         isLinks = true;
     };
 
-    if (state.isAboutUs) {
+    if (state.isComplex) {
         if (state.subcategory == undefined) {
-            // choosing about us subcategory
-            const keys = Object.keys(aboutUsItems);
+            // choosing subjects subcategory
+            const keys = Object.keys(subjectsItems);
             addNavbarItemsForSubcategories(keys);
         } else {
             // choosing links
-            const links = aboutUsItems[state.subcategory];
+            const links = subjectsItems[state.subcategory];
             addNavbarLinks(links);
         }
     } else {
         if (state.isTopmost) {
             // choosing topmost subcategory
             const keys = Object.keys(regularItems);
-            keys.splice(0, 0, "About Us");
+            keys.splice(0, 0, "Subjects");
             addNavbarItemsForSubcategories(keys);
         } else if (state.subcategory != undefined) {
             // ^ just make sure it's not undefined

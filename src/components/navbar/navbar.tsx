@@ -1,7 +1,7 @@
 import "assets/navbar.css"
 import flag from 'assets/un_flag.webp'
 import { useState } from "react";
-import { aboutUsItems, regularItems } from "./navbarLinks";
+import { subjectsItems, regularItems } from "./navbarLinks";
 import IbLogo from "components/ibLogo";
 import DropdownItem from "./dropdownItem";
 
@@ -40,13 +40,13 @@ const ComplexDropdownSubcategory = ({ text, changeHandler, isSelected }: { text:
 }
 
 const ComplexDropdownMenu = ({ enter, leave }: { enter: () => void, leave: () => void}) => {
-    const keys = Object.keys(aboutUsItems);
+    const keys = Object.keys(subjectsItems);
     const [category, setCategory] = useState(keys[0]);
     const changeContent = (cat: string) => {
         setCategory(cat);
     };
 
-    const itemsForCategory = aboutUsItems[category]
+    const itemsForCategory = subjectsItems[category]
     const dropDownElements: JSX.Element[] = [];
     itemsForCategory.forEach((item) => {
         const element = <DropdownItem text={item.text} url={item.redirect} textColor="black" />
@@ -95,7 +95,7 @@ const NavbarItem = ({ text }: { text: string }) => {
     };
 
     const render = mouseInDropdown || mouseInNavbar;
-    const dropdown = text != "About Us" ? <DropdownMenu text={text} enter={dropdownEnter} leave={dropdownLeave} />
+    const dropdown = text != "Subjects" ? <DropdownMenu text={text} enter={dropdownEnter} leave={dropdownLeave} />
         : <ComplexDropdownMenu enter={dropdownEnter} leave={dropdownLeave} />;
 
     return (
@@ -108,7 +108,7 @@ const NavbarItem = ({ text }: { text: string }) => {
 
 const Navbar = () => {
     const keys = Object.keys(regularItems);
-    keys.splice(0, 0, "About Us");
+    keys.splice(0, 0, "Subjects");
 
     const elements: JSX.Element[] = [];
     keys.forEach((key) => {
@@ -122,10 +122,10 @@ const Navbar = () => {
             <div className="navbar">
                 {elements}
             </div>
-            <div className="language-picker-wrapper">
+            {/* <div className="language-picker-wrapper">
                 <img className="flag" src={flag}></img>
                 <p className="language-text">EN</p>
-            </div>
+            </div> */}
         </div>
     );
 };

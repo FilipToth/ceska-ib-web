@@ -69,8 +69,6 @@ const Triangle = () => {
             console.log(err)
         });
 
-        console.log(scene);
-
         let currentAnims = {};
         let returningAnims = [];
 
@@ -96,8 +94,6 @@ const Triangle = () => {
                 const tweens = currentAnims[key];
                 tweens.forEach((data) => {
                     // reverse tween
-                    console.log(data);
-
                     const pos = data.pos;
                     const tween = data.tween;
 

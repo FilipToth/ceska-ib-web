@@ -103,8 +103,6 @@
 }
 
 .navbar-text {
-    /* About Us */
-
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: bold;
@@ -156,6 +154,14 @@
     flex-wrap: wrap;
     max-width: 300px;
     gap: 10px;
+
+    /* height needs to remain constant
+    between different tabs, I'm setting
+    this to 246, if you add more items to
+    the category with the most items,
+    change this. TODO: Do this
+    programatically */
+    height: 246px;
 }
 
 .navbar-dropdown-subcategory-selector-wrappers {
@@ -166,9 +172,6 @@
     max-width: 100px;
 
     background-color: #c7d2da;
-    padding-left: 10px;
-    padding-right: 10px;
-
     position: relative;
     align-self: stretch;
 }
@@ -177,7 +180,9 @@
     max-width: 120px;
     width: 100%;
     height: 100%;
-    padding: 0 10%;
+
+    padding-left: 4px;
+    padding-right: 4px;
 
     display: flex;
     justify-content: center;
@@ -201,6 +206,8 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
+
+    margin: 0;
 
     text-align: center;
 }
