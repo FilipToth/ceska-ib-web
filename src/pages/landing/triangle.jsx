@@ -63,7 +63,7 @@ const Triangle = () => {
         scene.add(light);
 
         let loader = new GLTFLoader();
-        loader.load("src/assets/triangle.glb", (gltf) => {
+        loader.load("triangle.glb", (gltf) => {
             scene.add(gltf.scene);
         }, undefined, (err) => {
             console.log(err)

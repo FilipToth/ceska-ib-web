@@ -3,7 +3,6 @@ import "assets/landing-2.css"
 import whyCeska from "assets/why-ceska.svg"
 import ibDescription from "assets/ib-description.svg"
 import EngagedButton from "components/engagedButton"
-import { Gradient } from "assets/gradient"
 import { useEffect } from "react"
 import Footer from "./footer"
 import Navbar from "components/navbar/navbar"
@@ -11,11 +10,11 @@ import { useMediaQuery } from "react-responsive"
 import MobileNavbar from "components/navbar/mobileNavbar"
 import Triangle from "./triangle"
 import { redirect } from "utils/helpers"
+import { initGradient } from "./gradientWrapper"
 
 const LandingPage = () => {
     useEffect(() => {
-        const gradient = new Gradient();
-        gradient.initGradient("#gradient-canvas");
+        initGradient();
     }, []);
 
     const aboutIBClick = () => {

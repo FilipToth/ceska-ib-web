@@ -11,6 +11,7 @@ const subjectsItems: { [subCategory: string]: DropdownEntry[] } = {
         { text: "Biology", redirect: "subjects/bio.pdf", icon: "icons/bio.svg" },
         { text: "Chemistry", redirect: "subjects/chem.pdf", icon: "icons/chem.svg" },
         { text: "Environmental Studies", redirect: "subjects/ess.pdf", icon: "icons/ess.svg" },
+        { text: "Physics", redirect: "subjects/physics.pdf", icon: "icons/physics.svg" },
         { text: "Math AA", redirect: "subjects/math-aa.pdf", icon: "icons/math-aa.svg" },
         { text: "Math AI", redirect: "subjects/math-ai.pdf", icon: "icons/math-ai.svg" }
     ],

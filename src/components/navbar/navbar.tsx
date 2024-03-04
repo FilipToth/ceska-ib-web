@@ -1,10 +1,8 @@
 import "assets/navbar.css"
-import flag from 'assets/un_flag.webp'
 import { useState } from "react";
 import { subjectsItems, regularItems } from "./navbarLinks";
 import IbLogo from "components/ibLogo";
 import DropdownItem from "./dropdownItem";
-import SchoolLogo from "components/schoolLogo";
 
 const DropdownMenu = ({ text, enter, leave }: { text: string, enter: () => void, leave: () => void }) => {
     var items = regularItems[text];
