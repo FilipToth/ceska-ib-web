@@ -5,7 +5,7 @@
 
 .footer-wrapper {
     position: relative;
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
     background: linear-gradient(89.83deg, #14B5EB 3.77%, #D226E1 92.26%);
 
     padding-top: 12vh;
