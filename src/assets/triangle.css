@@ -1,7 +1,6 @@
 .triangle-canvas {
     width: 600px;
     height: 600px;
-    background-color: aqua;
 }
 
 @media all and (max-width: 1400px) {
