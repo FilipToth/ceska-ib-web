@@ -87,10 +87,41 @@
     color: white;
 }
 
+.footer-contact-list-wrapper {
+    gap: 10px;
+    padding-top: 14px;
+}
+
+.footer-contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.school-name-subtext {
+    margin: 0 0;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(6px, 1.8vw + 0.1rem, 14px);
+    color: white;
+}
+
+.contact-icon {
+    width: clamp(12px, 3vw + 0.1rem, 20px);
+    height: clamp(12px, 3vw + 0.1rem, 20px);
+}
+
 @media all and (max-width: 846px) {
     .footer-content-wrapper {
         column-gap: 30vw;
         row-gap: clamp(20px, 10vw, 10vw);
         width: auto;
+    }
+
+    .footer-bottom-right-wrapper {
+        flex-direction: column;
     }
 }

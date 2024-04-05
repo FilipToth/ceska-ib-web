@@ -44,12 +44,14 @@ const regularItems: { [category: string]: DropdownEntry[] } = {
         { text: "What is an IB Education", redirect: "other/what-is-ib.pdf", icon: "icons/document.png" }
     ],
     "About Us": [
+        { text: "Newsletter", redirect: "other/newsletter.pdf", icon: "icons/document.png" },
+        { text: "Org Chart", redirect: "other/org-chart.jpg", icon: "icons/document.png" }
+    ],
+    "School Policies": [
         { text: "Academic Integrity", redirect: "other/academic-integrity.pdf", icon: "icons/document.png" },
         { text: "Assessment Policy", redirect: "other/assessment-policy.pdf", icon: "icons/document.png" },
         { text: "Inclusion Policy", redirect: "other/inclusion-policy.pdf", icon: "icons/document.png" },
         { text: "Language Policy", redirect: "other/language-policy.pdf", icon: "icons/document.png" },
-        { text: "Newsletter", redirect: "other/newsletter.pdf", icon: "icons/document.png" },
-        { text: "Org Chart", redirect: "other/org-chart.jpg", icon: "icons/document.png" }
     ]
 };
 
