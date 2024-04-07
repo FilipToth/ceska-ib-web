@@ -3,6 +3,7 @@ import { useState } from "react";
 import { subjectsItems, regularItems } from "./navbarLinks";
 import IbLogo from "components/ibLogo";
 import DropdownItem from "./dropdownItem";
+import SchoolLogo from "components/schoolLogo";
 
 const DropdownMenu = ({ text, enter, leave }: { text: string, enter: () => void, leave: () => void }) => {
     var items = regularItems[text];
@@ -117,6 +118,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar-wrapper">
+            <SchoolLogo style={undefined} />
             <IbLogo />
             <div className="navbar">
                 {elements}

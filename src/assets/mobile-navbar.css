@@ -14,6 +14,12 @@
     z-index: 1;
 }
 
+.mobile-navbar-logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .mobile-navbar-hamburger {
     width: 13vw;
     height: 13vw;

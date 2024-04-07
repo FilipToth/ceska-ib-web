@@ -7,6 +7,7 @@ import IbLogo from "components/ibLogo";
 import { useState } from "react";
 import { DropdownEntry, subjectsItems, regularItems } from "./navbarLinks";
 import DropdownItem from "./dropdownItem";
+import SchoolLogo from "components/schoolLogo"
 
 const ExpandedNavbarItem = ({ text, clicked }: { text: string, clicked: (category: string) => void }) => {
     return (
@@ -148,7 +149,10 @@ const MobileNavbar = () => {
         <>
             <div className="mobile-navbar-wrapper" onClick={hamburgerClick}>
                 <img className="mobile-navbar-hamburger" src={hamburger}></img>
-                <IbLogo />
+                <div className="mobile-navbar-logo-wrapper">
+                    <SchoolLogo style={undefined} />
+                    <IbLogo />
+                </div>
             </div>
             { showExpandedNavbar && <ExpandedNavbar close={closeNavbarExpansion} />}
         </>

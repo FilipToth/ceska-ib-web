@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1B1464;}
+	.st1{font-family:'Krub-Bold';}
+	.st2{font-size:30px;}
+	.st3{letter-spacing:0.97;}
+	.st4{fill:none;stroke:#1B1464;stroke-width:22;stroke-miterlimit:10;}
+	.st5{letter-spacing:1.01;}
+	.st6{fill:none;stroke:#1B1464;stroke-width:18;stroke-miterlimit:10;}
+	.st7{font-size:27px;}
+</style>
+<g id="Layer_2">
+	<text transform="matrix(0.5941 -0.7943 0.8157 0.5785 102.466 304.3935)" class="st0 st1 st2">STUDENTS</text>
+	<text transform="matrix(1.027 0 0 1 196.4761 396.6914)" class="st0 st1 st2 st3">SCHOOL</text>
+	<polyline class="st4" points="188,170 208.94,141.54 260.27,70.19 310.91,143.28 330.49,170 	"/>
+	<text transform="matrix(0.5581 0.8174 -0.8395 0.5434 330.1129 191.8705)" class="st0 st1 st2 st5">PARENTS</text>
+	<path class="st6" d="M223.55,316.1"/>
+	<path class="st6" d="M283.74,322.9"/>
+	<g>
+		<path class="st6" d="M293.62,316.43c-21.14,12.6-46.7,11.95-66.72,0.23"/>
+		<text transform="matrix(0.9897 -0.0122 -0.0122 0.9999 250.8118 203.2788)" class="st0 st1 st7 st5">G</text>
+		<text transform="matrix(0.9408 -0.3142 0.3407 0.9402 235.5949 208.9387)" class="st0 st1 st7">S</text>
+		<text transform="matrix(0.9628 0.3574 -0.348 0.9375 267.6248 203.7279)" class="st0 st1 st7 st3">Č</text>
+		<path class="st6" d="M193.58,260.69c0-25.5,14.55-47.6,35.81-58.44"/>
+		<path class="st6" d="M325.1,261.14c0-25.5-14.55-47.6-35.81-58.44"/>
+		<text transform="matrix(-0.5127 -0.8466 0.8678 -0.4969 214.3554 298.4376)" class="st0 st1 st7 st5">G</text>
+		<text transform="matrix(-0.7482 -0.6512 0.6372 -0.7707 227.6985 308.0813)" class="st0 st1 st7">S</text>
+		<text transform="matrix(-0.1806 -1.011 0.9844 -0.1758 205.3686 282.3773)" class="st0 st1 st7 st3">Č</text>
+		<text transform="matrix(-0.4651 0.8736 -0.8709 -0.4915 313.5419 280.5374)" class="st0 st1 st7 st5">G</text>
+		<text transform="matrix(-0.1768 0.976 -0.9882 -0.1533 315.2692 262.8067)" class="st0 st1 st7">S</text>
+		<text transform="matrix(-0.7763 0.6723 -0.6547 -0.7559 304.6147 295.22)" class="st0 st1 st7 st3">Č</text>
+	</g>
+	<polyline class="st4" points="157.74,389.29 137.28,389.29 30.69,389.29 91.61,304.39 	"/>
+	<polyline class="st4" points="356,389 376.45,389 483.05,389 422.12,304.1 	"/>
+</g>
+<g id="Layer_3">
+</g>
+</svg>

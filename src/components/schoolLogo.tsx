@@ -1,5 +1,5 @@
 import "assets/school-logo.css"
-import schoolLogo from 'assets/school-logo.png'
+import schoolLogo from 'assets/school-logo.svg'
 import React from "react";
 
 const SchoolLogo = ({ style }: { style: React.CSSProperties | undefined }) => {

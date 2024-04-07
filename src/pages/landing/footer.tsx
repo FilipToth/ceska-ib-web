@@ -53,8 +53,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-bottom-right-wrapper">
-                        <SchoolLogo style={undefined} />
                         <IbLogo />
+                        <SchoolLogo style={undefined} />
                     </div>
                 </div>
             </div>
