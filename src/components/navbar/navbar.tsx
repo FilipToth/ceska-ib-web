@@ -107,7 +107,7 @@ const NavbarItem = ({ text }: { text: string }) => {
 
 const Navbar = () => {
     const keys = Object.keys(regularItems);
-    keys.splice(0, 0, "Subjects");
+    keys.splice(1, 0, "Subjects");
 
     const elements: JSX.Element[] = [];
     keys.forEach((key) => {

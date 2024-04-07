@@ -31,10 +31,9 @@ const subjectsItems: { [subCategory: string]: DropdownEntry[] } = {
 };
 
 const regularItems: { [category: string]: DropdownEntry[] } = {
-    "Apply Now": [
-        { text: "Admissions Criteria", redirect: "other/admissions-criteria.pdf", icon: "icons/document.png" },
-        { text: "Application English", redirect: "other/application-english.pdf", icon: "icons/document.png" },
-        { text: "Applicaton Slovak", redirect: "other/application-slovak.pdf", icon: "icons/document.png" },
+    "About Us": [
+        { text: "Newsletter", redirect: "other/newsletter.pdf", icon: "icons/document.png" },
+        { text: "Org Chart", redirect: "other/org-chart.jpg", icon: "icons/document.png" }
     ],
     "IB Core": [
         { text: "CAS Handbook", redirect: "other/cas-handbook.pdf", icon: "icons/document.png" },
@@ -43,16 +42,21 @@ const regularItems: { [category: string]: DropdownEntry[] } = {
         { text: "History of the IB", redirect: "other/ib-history.pdf", icon: "icons/document.png" },
         { text: "What is an IB Education", redirect: "other/what-is-ib.pdf", icon: "icons/document.png" }
     ],
-    "About Us": [
-        { text: "Newsletter", redirect: "other/newsletter.pdf", icon: "icons/document.png" },
-        { text: "Org Chart", redirect: "other/org-chart.jpg", icon: "icons/document.png" }
-    ],
     "School Policies": [
         { text: "Academic Integrity", redirect: "other/academic-integrity.pdf", icon: "icons/document.png" },
         { text: "Assessment Policy", redirect: "other/assessment-policy.pdf", icon: "icons/document.png" },
         { text: "Inclusion Policy", redirect: "other/inclusion-policy.pdf", icon: "icons/document.png" },
         { text: "Language Policy", redirect: "other/language-policy.pdf", icon: "icons/document.png" },
-    ]
+    ],
+    "Apply Now": [
+        { text: "Admissions Criteria", redirect: "other/admissions-criteria.pdf", icon: "icons/document.png" },
+        { text: "Admissions Policy", redirect: "other/admissions-policy.pdf", icon: "icons/document.png" },
+        { text: "Admissions Process Info", redirect: "other/admissions-process-info.pdf", icon: "icons/document.png" },
+        { text: "Admissions Announcement", redirect: "other/admissions-announcement.pdf", icon: "icons/document.png" },
+        { text: "Tuition", redirect: "other/tuition.pdf", icon: "icons/document.png" },
+        { text: "Application English", redirect: "other/application-english.pdf", icon: "icons/document.png" },
+        { text: "Applicaton Slovak", redirect: "other/application-slovak.pdf", icon: "icons/document.png" },
+    ],
 };
 
 export { subjectsItems, regularItems, type DropdownEntry };

@@ -36,7 +36,7 @@ const Footer = () => {
                 </div> */}
                 <div className="footer-bottom-wrapper">
                     <div>
-                        <p className="school-name-text">© 2024 Sukromne Gymnazium Ceska 10</p>
+                        <p className="school-name-text">© 2024 Súkromné Gymnázium Česká 10</p>
                         <div className="footer-contact-list-wrapper">
                             <div className="footer-contact-wrapper">
                                 <img className="contact-icon" src={emailIcon}></img>

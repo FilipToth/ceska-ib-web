@@ -54,8 +54,8 @@ const LandingPage = () => {
             <div className="landing-wrapper">
                 <div className="landing-subpage-layout">
                     <div className="landing-subpage-left-wrapper">
-                        <p className="landing-subpage-heading">Why Ceska?</p>
-                        <p className="landing-subpage-subheading">Sukromne Gymnazium Ceska offers tailored support and a nurturing environment for academic excellence. With experienced faculty and personalized attention, students develop essential skills for lifelong success. Join our collaborative community to excel academically and grow as well-rounded individuals prepared for the future.</p>
+                        <p className="landing-subpage-heading">Why Česká?</p>
+                        <p className="landing-subpage-subheading">Sukromne Gymnazium Česká offers tailored support and a nurturing environment for academic excellence. With experienced faculty and personalized attention, students develop essential skills for lifelong success. Join our collaborative community to excel academically and grow as well-rounded individuals prepared for the future.</p>
                     </div>
                     <img className="landing-subpage-animation-canvas" src={whyCeska}></img>
                 </div>
