@@ -229,18 +229,6 @@
     }
 }
 
-@media all and (max-width: 520px) {
-    .ib-logo {
-        width: 12vw;
-        height: 12vw;
-    }
-
-    .ib-logo-wrapper {
-        width: 12vw;
-        height: 12vw;
-    }
-}
-
 @media all and (max-width: 500px) {
     .flag {
         display: none;

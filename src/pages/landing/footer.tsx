@@ -1,8 +1,7 @@
 import "assets/landing-footer.css"
-import IbLogo from "components/ibLogo"
-import SchoolLogo from "components/schoolLogo";
 import phoneIcon from "assets/phone.png"
 import emailIcon from "assets/email.png"
+import LogoBar from "components/logoBar";
 
 const Footer = () => {
     return (
@@ -53,8 +52,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-bottom-right-wrapper">
-                        <IbLogo />
-                        <SchoolLogo style={undefined} />
+                        <LogoBar wrapperStyle={{}} />
                     </div>
                 </div>
             </div>
