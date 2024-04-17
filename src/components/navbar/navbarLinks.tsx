@@ -27,12 +27,14 @@ const subjectsItems: { [subCategory: string]: DropdownEntry[] } = {
         { text: "Global Politics", redirect: "subjects/global-politics.pdf", icon: "icons/global-politics.svg" },
         { text: "History HL", redirect: "subjects/history-hl.pdf", icon: "icons/history.svg" },
         { text: "History SL", redirect: "subjects/history-sl.pdf", icon: "icons/history.svg" }
+    ],
+    "Core": [
+        { text: "TOK - CORE", redirect: "other/core-tok-2022.pdf", icon: "icons/psycho.svg" }
     ]
 };
 
 const regularItems: { [category: string]: DropdownEntry[] } = {
     "About Us": [
-        { text: "Newsletter", redirect: "other/newsletter.pdf", icon: "icons/document.png" },
         { text: "Org Chart", redirect: "other/org-chart.jpg", icon: "icons/document.png" }
     ],
     "IB Core": [
@@ -56,7 +58,8 @@ const regularItems: { [category: string]: DropdownEntry[] } = {
         { text: "Tuition", redirect: "other/tuition.pdf", icon: "icons/document.png" },
         { text: "Application English", redirect: "other/application-english.pdf", icon: "icons/document.png" },
         { text: "Applicaton Slovak", redirect: "other/application-slovak.pdf", icon: "icons/document.png" },
-        { text: "Sample Test - MATH", redirect: "other/sample-test.pdf", icon: "icons/math-aa.svg" },
+        { text: "Sample Test - MATH", redirect: "other/sample-test-math.pdf", icon: "icons/math-aa.svg" },
+        { text: "Sample Test - ENGLISH", redirect: "other/sample-test-english.pdf", icon: "icons/lang-a.svg" },
     ],
 };
 
