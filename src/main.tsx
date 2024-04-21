@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import AlbumViewRoute from 'routes/albumViewRoute';
 import GalleryRoute from 'routes/galleryRoute';
-import GalleryViewRoute from 'routes/galleryViewRoute';
 import LandingRoute from 'routes/landingRoute';
 
 const router = createBrowserRouter([
@@ -11,8 +11,8 @@ const router = createBrowserRouter([
     element: <LandingRoute />
   },
   {
-    path: '/gallery-view',
-    element: <GalleryViewRoute />
+    path: '/albums',
+    element: <AlbumViewRoute />
   },
   {
     path: '/gallery',
