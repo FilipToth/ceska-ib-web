@@ -39,7 +39,7 @@ const Footer = () => {
                         <div className="footer-contact-list-wrapper">
                             <div className="footer-contact-wrapper">
                                 <img className="contact-icon" src={emailIcon}></img>
-                                <p className="school-name-subtext">Head of Shcool: babic.sgc@gmail.com</p>
+                                <p className="school-name-subtext">Head of School: babic.sgc@gmail.com</p>
                             </div>
                             <div className="footer-contact-wrapper">
                                 <img className="contact-icon" src={emailIcon}></img>
