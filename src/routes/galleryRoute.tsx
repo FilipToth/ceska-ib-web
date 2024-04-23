@@ -4,7 +4,7 @@ const GalleryRoute = () => {
     return (
         <>
             <main>
-                <Gallery name='' />
+                <Gallery />
             </main>
         </>
     )

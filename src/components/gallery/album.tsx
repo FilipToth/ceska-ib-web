@@ -1,20 +1,29 @@
 import "assets/album.css"
+import { AlbumEntry } from "./albums";
+import { ReactElement } from "react";
+import { redirect } from "utils/helpers";
 
-const Album = ({ name }: { name: string }) => {
+const Album = ({ album }: { album: AlbumEntry }) => {
+    const images: ReactElement[] = [];
+    album.items.forEach(item => {
+        const image = <img className="album-cover-image" src={item}></img>
+        images.push(image);
+    });
+
+    const albumClick = () => {
+        redirect(`/gallery?id=${album.id}`);
+    };
+
     return (
-        <div className="album-wrapper">
+        <div className="album-wrapper" onClick={albumClick}>
             <div className="album-cover-wrapper">
                 <div className="album-info-wrapper">
-                    <p className="album-text album-header">{name}</p>
-                    <p className="album-text album-subheader">oeufuef</p>
+                    <p className="album-text album-header">{album.name}</p>
+                    <p className="album-text album-subheader">{album.description}</p>
                 </div>
             </div>
             <div className="album-images-wrapper">
-                <img className="album-cover-image" src="flag.png"></img>
-                <img className="album-cover-image" src="sf.jpg"></img>
-                <img className="album-cover-image" src="flag.png"></img>
-                <img className="album-cover-image" src="sf.jpg"></img>
-                <img className="album-cover-image" src="flag.png"></img>
+                { images }
             </div>
         </div>
     )

@@ -1,15 +1,17 @@
 import "assets/album-view.css"
 import Album from "components/gallery/album";
+import { albums } from "components/gallery/albums";
 import GalleryHeader from "components/gallery/galleryHeader";
 import Footer from "pages/landing/footer";
 
 const AlbumView = () => {
     return (
         <div className="album-view-parent-wrapper">
-            <GalleryHeader />
+            <GalleryHeader rightText="Ceska 10 IB - Albums" showGoBack={false} />
             <div className="album-view-wrapper">
-                <Album name="Test Album... foobar" />
-                <Album name="Test Album... foobar" />
+                { albums.map((album) => {
+                    return <Album album={album} />
+                })}
             </div>
             <Footer />
         </div>
