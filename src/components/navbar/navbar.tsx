@@ -1,14 +1,17 @@
 import "assets/navbar.css"
 import { useState } from "react";
-import { subjectsItems, regularItems } from "./navbarLinks";
+import { subjectsItems, regularItems, isTextInComplexDropdown } from "./navbarLinks";
 import DropdownItem from "./dropdownItem";
 import LogoBar from "components/logoBar";
+import { redirect } from "utils/helpers";
 
 const DropdownMenu = ({ text, enter, leave }: { text: string, enter: () => void, leave: () => void }) => {
-    var items = regularItems[text];
-    const elements: JSX.Element[] = [];
+    var menu = regularItems[text];
+    if (menu.items.length == 0)
+        return <></>
 
-    items.forEach((item) => {
+    const elements: JSX.Element[] = [];
+    menu.items.forEach((item) => {
         const element = <DropdownItem text={item.text} url={item.redirect} icon={item.icon} textColor="black" />
         elements.push(element);
     });
@@ -77,6 +80,12 @@ const NavbarItem = ({ text }: { text: string }) => {
     const [mouseInNavbar, setMouseInNavbar] = useState(false);
     const [mouseInDropdown, setMouseInDropdown] = useState(false);
 
+    let redirectUrl = "";
+    if (!isTextInComplexDropdown(text)) {
+        const menu = regularItems[text];
+        redirectUrl = menu.redirect;
+    }
+
     const mouseEnter = () => {
         setMouseInNavbar(true);
     };
@@ -93,13 +102,24 @@ const NavbarItem = ({ text }: { text: string }) => {
         setMouseInDropdown(false);
     };
 
+    const textClick = () => {
+        if (redirectUrl == "")
+            return;
+
+        redirect(redirectUrl);
+    };
+
+    let navbarTextClass = "navbar-text";
+    if (redirectUrl != "")
+        navbarTextClass += " navbar-text-clickable"
+
     const render = mouseInDropdown || mouseInNavbar;
     const dropdown = text != "Subjects" ? <DropdownMenu text={text} enter={dropdownEnter} leave={dropdownLeave} />
         : <ComplexDropdownMenu enter={dropdownEnter} leave={dropdownLeave} />;
 
     return (
         <div onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className="navbar-item-wrapper">
-            <p className="navbar-text">{text}</p>
+            <p className={navbarTextClass} onClick={textClick}>{text}</p>
             {render && dropdown }
         </div>
     );

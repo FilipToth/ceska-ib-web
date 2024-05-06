@@ -4,8 +4,9 @@ import { ReactElement } from "react";
 import { redirect } from "utils/helpers";
 
 const Album = ({ album }: { album: AlbumEntry }) => {
+    // just render the first 7 elements..
     const images: ReactElement[] = [];
-    album.items.forEach(item => {
+    album.items.splice(0, 12).forEach(item => {
         const image = <img className="album-cover-image" src={item}></img>
         images.push(image);
     });

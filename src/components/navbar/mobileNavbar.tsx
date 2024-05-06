@@ -4,15 +4,22 @@ import hamburger from "assets/hamburger.svg"
 import rightArrow from "assets/right-arrow.svg"
 import leftArrow from "assets/left-arrow.svg"
 import { useState } from "react";
-import { DropdownEntry, subjectsItems, regularItems } from "./navbarLinks";
+import { DropdownEntry, subjectsItems, regularItems, isTextInComplexDropdown } from "./navbarLinks";
 import DropdownItem from "./dropdownItem";
 import LogoBar from "components/logoBar"
+import { redirect } from "utils/helpers"
 
 const ExpandedNavbarItem = ({ text, clicked }: { text: string, clicked: (category: string) => void }) => {
+    let redirectUrl = "";
+    if (!isTextInComplexDropdown(text)) {
+        const menu = regularItems[text];
+        redirectUrl = menu.redirect;
+    }
+
     return (
         <div className="expanded-navbar-item-wrapper" onClick={() => clicked(text)}>
             <p className="expanded-navbar-item-text">{text}</p>
-            <img src={rightArrow} className="expanded-navbar-item-arrow-image"></img>
+            {redirectUrl == "" && <img src={rightArrow} className="expanded-navbar-item-arrow-image"></img>}
         </div>
     );
 };
@@ -34,6 +41,17 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
     let [state, setState] = useState(initialState);
 
     const itemClick = (text: string) => {
+        let redirectUrl = "";
+        if (!isTextInComplexDropdown(text)) {
+            const menu = regularItems[text];
+            redirectUrl = menu.redirect;
+        }
+
+        if (redirectUrl != "") {
+            redirect(redirectUrl);
+            return;
+        }
+
         const newState: ExpandedNavbarState = {
             isComplex: false,
             isTopmost: false,
@@ -107,8 +125,8 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
             // ^ just make sure it's not undefined
 
             // choosing topmost regular subcategory items
-            const links = regularItems[state.subcategory];
-            addNavbarLinks(links);
+            const menu = regularItems[state.subcategory];
+            addNavbarLinks(menu.items);
         }
     }
 

@@ -120,6 +120,10 @@
     color: rgba(255, 255, 255, 0.85);
 }
 
+.navbar-text-clickable {
+    cursor: pointer;
+}
+
 .navbar-text:hover {
     color: rgba(200, 200, 200, 1);
 }
