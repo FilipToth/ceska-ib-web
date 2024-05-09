@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # don't host the images on git
-public/albums
+public/album-photos
