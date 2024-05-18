@@ -1,5 +1,5 @@
 import "assets/gallery.css"
-import { albums } from "components/gallery/albums";
+import { AlbumEntry, albums, LOW_WIDTH, MID_WIDTH, HIGH_WIDTH } from "components/gallery/albums";
 import GalleryHeader from "components/gallery/galleryHeader";
 import Footer from "pages/landing/footer";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
@@ -11,6 +11,29 @@ interface AlbumVisualInfo {
 }
 
 const Gallery = () => {
+    const getAlbumItems = (album: AlbumEntry) => {
+        const windowWidth = window.innerWidth;
+
+        let numBreakouts = 1;
+        if (windowWidth >= 900)
+            numBreakouts = 3;
+        else if (windowWidth >= 650)
+            numBreakouts = 2;
+
+        const width = windowWidth / numBreakouts;
+
+        let parent = album.itemsParentDir;
+        if (width <= LOW_WIDTH)
+            parent = album.lowParentDir;
+        else if (width <= MID_WIDTH)
+            parent = album.midParentDir;
+        else if (width < HIGH_WIDTH)
+            parent = album.highParentDir;
+
+        const items = album.items.map((i) => parent + i);
+        return items;
+    }
+
     const getAlbumInfo = () => {
         const [queryParams] = useSearchParams();
         const id = queryParams.get('id');
@@ -24,7 +47,8 @@ const Gallery = () => {
             return empty;
 
         const album = matching[0];
-        const info: AlbumVisualInfo = { name: album.name, items: album.items }
+        const items = getAlbumItems(album);
+        const info: AlbumVisualInfo = { name: album.name, items: items }
         return info;
     };
 
@@ -34,7 +58,7 @@ const Gallery = () => {
         <div className="gallery-view-parent-wrapper">
             <GalleryHeader rightText={info.name} showGoBack={true} />
             <div className="gallery-view-wrapper">
-                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
+                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 650: 2, 900: 3}}>
                     <Masonry gutter="30px">
                         { info.items.map((src) => {
                             return <img className="gallery-image" src={src}></img>

@@ -4,10 +4,12 @@ import { ReactElement } from "react";
 import { redirect } from "utils/helpers";
 
 const Album = ({ album }: { album: AlbumEntry }) => {
-    // just render the first 7 elements..
+    // just render the first 12 elements..
     const images: ReactElement[] = [];
     album.items.splice(0, 12).forEach(item => {
-        const image = <img className="album-cover-image" src={item}></img>
+        const path = album.thumbsParentDir + item;
+        console.log(path);
+        const image = <img className="album-cover-image" src={path}></img>
         images.push(image);
     });
 
