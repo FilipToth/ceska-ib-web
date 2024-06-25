@@ -1,41 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#1B1464;}
-	.st1{font-family:'Krub-Bold';}
-	.st2{font-size:30px;}
-	.st3{letter-spacing:0.97;}
-	.st4{fill:none;stroke:#1B1464;stroke-width:22;stroke-miterlimit:10;}
-	.st5{letter-spacing:1.01;}
-	.st6{fill:none;stroke:#1B1464;stroke-width:18;stroke-miterlimit:10;}
-	.st7{font-size:27px;}
-</style>
-<g id="Layer_2">
-	<text transform="matrix(0.5941 -0.7943 0.8157 0.5785 102.466 304.3935)" class="st0 st1 st2">STUDENTS</text>
-	<text transform="matrix(1.027 0 0 1 196.4761 396.6914)" class="st0 st1 st2 st3">SCHOOL</text>
-	<polyline class="st4" points="188,170 208.94,141.54 260.27,70.19 310.91,143.28 330.49,170 	"/>
-	<text transform="matrix(0.5581 0.8174 -0.8395 0.5434 330.1129 191.8705)" class="st0 st1 st2 st5">PARENTS</text>
-	<path class="st6" d="M223.55,316.1"/>
-	<path class="st6" d="M283.74,322.9"/>
-	<g>
-		<path class="st6" d="M293.62,316.43c-21.14,12.6-46.7,11.95-66.72,0.23"/>
-		<text transform="matrix(0.9897 -0.0122 -0.0122 0.9999 250.8118 203.2788)" class="st0 st1 st7 st5">G</text>
-		<text transform="matrix(0.9408 -0.3142 0.3407 0.9402 235.5949 208.9387)" class="st0 st1 st7">S</text>
-		<text transform="matrix(0.9628 0.3574 -0.348 0.9375 267.6248 203.7279)" class="st0 st1 st7 st3">Č</text>
-		<path class="st6" d="M193.58,260.69c0-25.5,14.55-47.6,35.81-58.44"/>
-		<path class="st6" d="M325.1,261.14c0-25.5-14.55-47.6-35.81-58.44"/>
-		<text transform="matrix(-0.5127 -0.8466 0.8678 -0.4969 214.3554 298.4376)" class="st0 st1 st7 st5">G</text>
-		<text transform="matrix(-0.7482 -0.6512 0.6372 -0.7707 227.6985 308.0813)" class="st0 st1 st7">S</text>
-		<text transform="matrix(-0.1806 -1.011 0.9844 -0.1758 205.3686 282.3773)" class="st0 st1 st7 st3">Č</text>
-		<text transform="matrix(-0.4651 0.8736 -0.8709 -0.4915 313.5419 280.5374)" class="st0 st1 st7 st5">G</text>
-		<text transform="matrix(-0.1768 0.976 -0.9882 -0.1533 315.2692 262.8067)" class="st0 st1 st7">S</text>
-		<text transform="matrix(-0.7763 0.6723 -0.6547 -0.7559 304.6147 295.22)" class="st0 st1 st7 st3">Č</text>
-	</g>
-	<polyline class="st4" points="157.74,389.29 137.28,389.29 30.69,389.29 91.61,304.39 	"/>
-	<polyline class="st4" points="356,389 376.45,389 483.05,389 422.12,304.1 	"/>
-</g>
-<g id="Layer_3">
-</g>
-</svg>
+<svg version="1.1" id="svg2" xml:space="preserve" viewBox="103.76533688 106.49600364 472.40534948 421.88801442" xmlns="http://www.w3.org/2000/svg" style="max-height: 500px" width="472.40534948" height="421.88801442"><metadata id="metadata8">image/svg+xml</metadata><defs id="defs6"><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"><path d="M 0,512 H 512 V 0 H 0 Z" id="path20"/></clipPath><clipPath clipPathUnits="userSpaceOnUse" id="clipPath54"><path d="M 0,512 H 512 V 0 H 0 Z" id="path52"/></clipPath><clipPath clipPathUnits="userSpaceOnUse" id="clipPath82"><path d="M 0,512 H 512 V 0 H 0 Z" id="path80"/></clipPath><clipPath clipPathUnits="userSpaceOnUse" id="clipPath106"><path d="M 0,512 H 512 V 0 H 0 Z" id="path104"/></clipPath></defs><g id="g10" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><text transform="matrix(1,0,0,-0.97372937,200.3555,121.957)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.61370087px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text14"><tspan x="0 19.886522 39.60136 61.147476 82.121323 103.09516" y="0" id="tspan12">SCHOOL</tspan></text>
+<g id="g16"><g id="g18" clip-path="url(#clipPath22)"><g id="g24" transform="translate(129.285,213.9599)"><path d="m 0,0 -33.622,-58.02 c -6.289,-10.852 1.542,-24.44 14.085,-24.44 h 82.208" style="fill:none;stroke:#6b0b21;stroke-width:22;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path26"/></g><g id="g28" transform="translate(209.8276,352.9474)"><path d="m 0,0 32.018,55.252 c 6.287,10.849 21.964,10.816 28.204,-0.06 L 92.207,-0.551" style="fill:none;stroke:#6b0b21;stroke-width:22;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path30"/></g><g id="g32" transform="translate(328.3297,131.5)"><path d="M 0,0 H 72.347 C 84.859,0 92.693,13.528 86.466,24.38 L 53.14,82.46" style="fill:none;stroke:#6b0b21;stroke-width:22;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path34"/></g><text transform="matrix(0.98965675,0.01220292,-0.01221089,-0.99992554,247.4089,306.2098)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.07596779px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text38"><tspan x="0" y="0" id="tspan36">G</tspan></text>
+<text transform="matrix(0.94024574,0.31401576,0.34049661,-0.93964789,233.2818,300.9359)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.08982468px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text42"><tspan x="0" y="0" id="tspan40">S</tspan></text>
+</g></g><text transform="matrix(0.94043424,-0.34914533,-0.33997564,-0.91572595,263.0881,306.7288)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.67154503px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text46"><tspan x="0" y="0" id="tspan44">Č</tspan></text>
+<g id="g48"><g id="g50" clip-path="url(#clipPath54)"><g id="g56" transform="translate(316.2533,257.2155)"><path d="M 0,0 C -1.656,21.674 -14.656,40.174 -33.075,49.574" style="fill:none;stroke:#6b0b21;stroke-width:18;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path58"/></g><text transform="matrix(-0.61613979,0.76466794,0.78763682,0.6033793,218.5094,215.7568)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.27332306px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text62"><tspan x="0" y="0" id="tspan60">Z</tspan></text>
+<text transform="matrix(-0.74150397,0.6454109,0.63156135,0.76383557,229.6858,206.1353)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.30047226px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text66"><tspan x="0" y="0" id="tspan64">S</tspan></text>
+</g></g><text transform="matrix(-0.32425186,0.94884826,0.92392079,0.31573244,209.8278,224.4844)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.68250465px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text70"><tspan x="0" y="0" id="tspan68">Š</tspan></text>
+<text transform="matrix(-0.17599204,0.98520719,0.95932487,0.17136742,204.98,237.9706)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.73184586px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text74"><tspan x="0" y="0" id="tspan72">Č</tspan></text>
+<g id="g76"><g id="g78" clip-path="url(#clipPath82)"><text transform="matrix(-0.40019886,-0.90441642,-0.90359951,0.42665084,308.366,242.6686)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.09452438px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text86"><tspan x="0" y="0" id="tspan84">M</tspan></text>
+<text transform="matrix(-0.09813561,-0.98489388,-0.99517305,0.07374497,309.1026,257.3518)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.12849426px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text90"><tspan x="0" y="0" id="tspan88">S</tspan></text>
+</g></g><text transform="matrix(-0.65501595,-0.77019546,-0.74996043,0.63780793,300.7313,226.0753)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.47067642px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text94"><tspan x="0" y="0" id="tspan92">Š</tspan></text>
+<text transform="matrix(-0.81834096,-0.59023672,-0.57473304,0.79683877,291.5427,215.1906)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.52297974px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text98"><tspan x="0" y="0" id="tspan96">Č</tspan></text>
+<g id="g100"><g id="g102" clip-path="url(#clipPath106)"><g id="g108" transform="translate(194.8143,258.1039)"><path d="M 0,0 C 1.656,21.674 14.656,40.174 33.075,49.574" style="fill:none;stroke:#6b0b21;stroke-width:18;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path110"/></g><g id="g112" transform="translate(281.4767,198.346)"><path d="M 0,0 C -16.915,-8.121 -36.434,-7.821 -52.858,0.116" style="fill:none;stroke:#6b0b21;stroke-width:18;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path114"/></g><text transform="matrix(0.49203697,0.85130427,0.8705743,-0.47416167,141.8174,215.8043)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.10581398px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text118"><tspan x="0 18.043934 33.052437 53.035671 72.203835 87.943092 107.61716 122.62567" y="0" id="tspan116">STUDENTS</tspan></text>
+<text transform="matrix(0.48589404,-0.85523531,-0.87401772,-0.4685745,303.5376,328.6726)" style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.09542656px;font-family:Krub;-inkscape-font-specification:Krub-Bold;writing-mode:lr-tb;fill:#6b0b21;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text122"><tspan x="0 17.278687 35.821667 53.802742 69.536179 89.20298 104.20593" y="0" id="tspan120">PARENTS</tspan></text>
+</g></g></g></svg>
