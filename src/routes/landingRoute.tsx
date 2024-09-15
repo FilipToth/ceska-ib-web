@@ -1,4 +1,4 @@
-import LandingPage from 'pages/landing/landing'
+import LandingPage from 'pages/landing/MainLanding'
 
 const LandingRoute = () => {
     return (

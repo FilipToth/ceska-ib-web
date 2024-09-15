@@ -5,7 +5,7 @@ import rightArrow from "assets/right-arrow.svg"
 import leftArrow from "assets/left-arrow.svg"
 import { useState } from "react";
 import { DropdownEntry, subjectsItems, regularItems, isTextInComplexDropdown } from "./navbarLinks";
-import DropdownItem from "./dropdownItem";
+import DropdownItem from "./DropdownItem";
 import LogoBar from "components/logoBar"
 import { redirect } from "utils/helpers"
 

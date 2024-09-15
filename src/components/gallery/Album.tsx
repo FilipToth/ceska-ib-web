@@ -8,7 +8,6 @@ const Album = ({ album }: { album: AlbumEntry }) => {
     const images: ReactElement[] = [];
     album.items.splice(0, 12).forEach(item => {
         const path = album.thumbsParentDir + item;
-        console.log(path);
         const image = <img className="album-cover-image" src={path}></img>
         images.push(image);
     });

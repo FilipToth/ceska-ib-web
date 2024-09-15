@@ -1,4 +1,4 @@
-import AlbumView from "pages/gallery/albumView";
+import AlbumView from "pages/gallery/AlbumView";
 
 const AlbumViewRoute = () => {
     return (

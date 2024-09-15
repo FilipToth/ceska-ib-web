@@ -1,4 +1,4 @@
-import Gallery from 'pages/gallery/gallery';
+import Gallery from 'pages/gallery/Gallery';
 
 const GalleryRoute = () => {
     return (

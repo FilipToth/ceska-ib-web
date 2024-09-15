@@ -1,8 +1,8 @@
 import "assets/album-view.css"
-import Album from "components/gallery/album";
+import Album from "components/gallery/Album";
 import { albums } from "components/gallery/albums";
-import GalleryHeader from "components/gallery/galleryHeader";
-import Footer from "pages/landing/footer";
+import Footer from "components/gallery/Footer";
+import GalleryHeader from "components/gallery/GalleryHeader";
 
 const AlbumView = () => {
     return (
