@@ -4,17 +4,19 @@ import whyCeska from "assets/why-ceska.svg"
 import ibDescription from "assets/ib-description.svg"
 import EngagedButton from "components/engagedButton"
 import { useEffect } from "react"
-import Footer from "../../components/gallery/Footer"
+import Footer from "../../components/Footer"
 import Navbar from "components/navbar/Navbar"
 import { useMediaQuery } from "react-responsive"
 import MobileNavbar from "components/navbar/MobileNavbar"
 import Triangle from "./Triangle"
 import { redirect } from "utils/helpers"
 import { initGradient } from "./gradientWrapper"
+import LandingPageSubsection from "./LandingPageSubsection"
+import LandingPageMainSubsection from "./LandingPageMainSubsection"
 
-const LandingPage = () => {
+const MainLanding = () => {
     useEffect(() => {
-        initGradient();
+        initGradient("#gradient-canvas");
     }, []);
 
     const aboutIBClick = () => {
@@ -25,44 +27,23 @@ const LandingPage = () => {
         redirect("other/ib-history.pdf");
     };
 
-    const isMobileNavbar = useMediaQuery({ query: "(max-width: 600px)" });
+    const firstHeading = "A World-class Curriculum for the Next Generation of Leaders";
+    const firstSubheading = "The IB Diploma Programme molds leaders through rigorous academics, critical thinking, and social responsibility, preparing students for a connected world with confidence and empathy.";
+
+    const secondHeading = "An education like no other!";
+    const secondSubheading = "The IB Diploma program offers a comprehensive and globally recognized curriculum, fostering critical thinking and intercultural understanding. Through inquiry-based learning and community service, students develop essential skills for success in today's interconnected world. Graduates emerge as well-rounded individuals, equipped to tackle challenges with confidence and integrity. Joining the IB community opens doors to diverse opportunities for personal growth and academic excellence.";
+
+    const thirdHeading = "Why Česká?";
+    const thirdSubheading = "Sukromne Gymnazium Česká offers tailored support and a nurturing environment for academic excellence. With experienced faculty and personalized attention, students develop essential skills for lifelong success. Join our collaborative community to excel academically and grow as well-rounded individuals prepared for the future.";
+
     return (
         <>
-            <div className="landing-wrapper">
-                <canvas id="gradient-canvas" width="203" data-transition-in data-js-darken-top></canvas>
-                { !isMobileNavbar && <Navbar /> }
-                { isMobileNavbar && <MobileNavbar /> }
-                <div className="top-info-align-wrapper">
-                    <div className="info-wrapper">
-                        <p className="gradient-text">A World-class Curriculum for the Next Generation of Leaders</p>
-                        <p className="gradient-about-text">The IB Diploma Programme molds leaders through rigorous academics, critical thinking, and social responsibility, preparing students for a connected world with confidence and empathy.</p>
-                        <EngagedButton text={"About the IB"} onClick={() => { aboutIBClick() }} additionalStyle={ {'order': 2} }/>
-                    </div>
-                   <Triangle />
-                </div>
-            </div>
-            <div className="landing-wrapper">
-                <div className="landing-subpage-layout">
-                    <div className="landing-subpage-left-wrapper">
-                        <p className="landing-subpage-heading">An education like no other!</p>
-                        <p className="landing-subpage-subheading">The IB Diploma program offers a comprehensive and globally recognized curriculum, fostering critical thinking and intercultural understanding. Through inquiry-based learning and community service, students develop essential skills for success in today's interconnected world. Graduates emerge as well-rounded individuals, equipped to tackle challenges with confidence and integrity. Joining the IB community opens doors to diverse opportunities for personal growth and academic excellence.</p>
-                        <EngagedButton text={"History of the IB"} onClick={() => { ibHistoryClick() }} additionalStyle={ {'order': 2} }/>
-                    </div>
-                    <img className="landing-subpage-animation-canvas" src={ibDescription}></img>
-                </div>
-            </div>
-            <div className="landing-wrapper">
-                <div className="landing-subpage-layout">
-                    <div className="landing-subpage-left-wrapper">
-                        <p className="landing-subpage-heading">Why Česká?</p>
-                        <p className="landing-subpage-subheading">Sukromne Gymnazium Česká offers tailored support and a nurturing environment for academic excellence. With experienced faculty and personalized attention, students develop essential skills for lifelong success. Join our collaborative community to excel academically and grow as well-rounded individuals prepared for the future.</p>
-                    </div>
-                    <img className="landing-subpage-animation-canvas" src={whyCeska}></img>
-                </div>
-            </div>
+            <LandingPageMainSubsection heading={firstHeading} subheading={firstSubheading} btnText="About the IB" btnClick={aboutIBClick} rightObject={<Triangle />} />
+            <LandingPageSubsection heading={secondHeading} subheading={secondSubheading} rightImage={ibDescription} btnText="History of the IB" onClick={ibHistoryClick} />
+            <LandingPageSubsection heading={thirdHeading} subheading={thirdSubheading} rightImage={whyCeska} btnText={undefined} onClick={undefined} />
             <Footer />
         </>
     )
 };
 
-export default LandingPage;
+export default MainLanding;

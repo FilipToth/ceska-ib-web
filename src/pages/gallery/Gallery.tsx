@@ -1,6 +1,6 @@
 import "assets/gallery.css"
 import { AlbumEntry, albums, LOW_WIDTH, MID_WIDTH, HIGH_WIDTH } from "components/gallery/albums";
-import Footer from "components/gallery/Footer";
+import Footer from "components/Footer";
 import GalleryHeader from "components/gallery/GalleryHeader";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { useSearchParams } from "react-router-dom";

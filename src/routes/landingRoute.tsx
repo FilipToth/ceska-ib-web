@@ -1,10 +1,10 @@
-import LandingPage from 'pages/landing/MainLanding'
+import MainLanding from 'pages/landing/MainLanding'
 
 const LandingRoute = () => {
     return (
         <>
             <main>
-                <LandingPage />
+                <MainLanding />
             </main>
         </>
     )

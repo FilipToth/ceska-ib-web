@@ -1,8 +1,8 @@
 import { Gradient } from "assets/gradient";
 
-const initGradient = () => {
+const initGradient = (canvasId) => {
     const gradient = new Gradient();
-    gradient.initGradient("#gradient-canvas");
+    gradient.initGradient(canvasId);
 };
 
 export { initGradient };
