@@ -3,12 +3,9 @@ import { useState } from "react";
 import DropdownItem from "./DropdownItem";
 import LogoBar from "components/logoBar";
 import { redirect } from "utils/helpers";
-import { ComplexDropdownMenu, DropdownMenu, NavbarItem, isComplexDropdownMenu, isDropdownMenu, isSimpleNavbarItem, mainItems } from "./navbarLinks";
+import { ComplexDropdownMenu, DropdownMenu, NavbarItem, NavbarItems, isComplexDropdownMenu, isDropdownMenu, isSimpleNavbarItem } from "./navbarLinks";
 
 const DropdownMenu = ({ item, enter, leave }: { item: DropdownMenu, enter: () => void, leave: () => void }) => {
-    if (mainItems.items.length == 0)
-        return <></>
-
     const elements: JSX.Element[] = [];
     item.items.forEach((item) => {
         const element = <DropdownItem text={item.text} url={item.redirect} icon={item.icon} textColor="black" />
@@ -130,9 +127,9 @@ const NavbarItem = ({ item }: { item: NavbarItem }) => {
     );
 };
 
-const Navbar = () => {
+const Navbar = ({ items }: { items: NavbarItems }) => {
     const elements: JSX.Element[] = [];
-    mainItems.items.forEach((item) => {
+    items.items.forEach((item) => {
         const element = <NavbarItem item={item} />
         elements.push(element);
     });

@@ -4,7 +4,7 @@ import hamburger from "assets/hamburger.svg"
 import rightArrow from "assets/right-arrow.svg"
 import leftArrow from "assets/left-arrow.svg"
 import { useState } from "react";
-import { DropdownEntry, NavbarItem, isComplexDropdownMenu, isDropdownMenu, isSimpleNavbarItem, mainItems } from "./navbarLinks";
+import { DropdownEntry, NavbarItem, NavbarItems, isComplexDropdownMenu, isDropdownMenu, isSimpleNavbarItem } from "./navbarLinks";
 import DropdownItem from "./DropdownItem";
 import LogoBar from "components/logoBar"
 import { redirect } from "utils/helpers"
@@ -23,7 +23,7 @@ interface ExpandedNavbarState {
     current: NavbarItem | undefined
 }
 
-const ExpandedNavbar = ({ close }: { close: () => void }) => {
+const ExpandedNavbar = ({ items, close }: { items: NavbarItems, close: () => void }) => {
     let initialState: ExpandedNavbarState = {
         prev: undefined,
         current: undefined
@@ -37,7 +37,7 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
         let newState: ExpandedNavbarState | undefined = undefined;
         if (curr == undefined) {
             // topmost
-            const item = mainItems.items.filter((i) => i.text == text)[0];
+            const item = items.items.filter((i) => i.text == text)[0];
             if (isSimpleNavbarItem(item)) {
                 redirect(item.redirect);
                 newState = state;
@@ -93,7 +93,7 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
 
     if (state.prev == undefined) {
         // is topmost
-        addNavbarItemsForSubcategories(mainItems.items);
+        addNavbarItemsForSubcategories(items.items);
     } else if (state.current != undefined) {
         const item = state.current;
 
@@ -124,7 +124,7 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
     );
 };
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ items }: { items: NavbarItems }) => {
     const [showExpandedNavbar, setShowExpandedNavbar] = useState(false);
     const hamburgerClick = () => {
         setShowExpandedNavbar(true);
@@ -144,7 +144,7 @@ const MobileNavbar = () => {
                     <LogoBar wrapperStyle={{}} />
                 </div>
             </div>
-            { showExpandedNavbar && <ExpandedNavbar close={closeNavbarExpansion} />}
+            { showExpandedNavbar && <ExpandedNavbar items={items} close={closeNavbarExpansion} />}
         </>
     );
 };

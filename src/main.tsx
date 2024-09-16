@@ -2,8 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import AlbumViewRoute from 'routes/albumViewRoute';
+import DpRoute from 'routes/dpRoute';
 import GalleryRoute from 'routes/galleryRoute';
 import LandingRoute from 'routes/landingRoute';
+import MypRoute from 'routes/mypRoute';
 
 const router = createBrowserRouter([
   {
@@ -20,11 +22,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dp',
-    element: <></>
+    element: <DpRoute />
   },
   {
     path: '/myp',
-    element: <></>
+    element: <MypRoute />
   }
 ]);
 
