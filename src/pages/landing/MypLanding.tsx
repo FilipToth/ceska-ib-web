@@ -10,6 +10,26 @@ import { NavbarItems } from "components/navbar/navbarLinks"
 const navbarItems: NavbarItems = {
     items: [
         {
+            text: "Our Vision",
+            redirect: "other/myp-mission-statement.pdf"
+        },
+        {
+            text: "International Cooperation",
+            redirect: ""
+        },
+        {
+            text: "IB Learner Profile",
+            redirect: "other/learner-profile.pdf"
+        },
+        {
+            text: "Policies",
+            items: [
+                { text: "FAQs", redirect: "other/myp-faqs.pdf", icon: "icons/document.png" },
+                { text: "MYP at a Glance", redirect: "other/myp-at-a-glance.pdf", icon: "icons/document.png" },
+                { text: "Marketing MYP", redirect: "other/marketing-myp.pdf", icon: "icons/document.png" },
+            ]
+        },
+        {
             text: "IB - Home",
             redirect: "/"
         }
