@@ -4,94 +4,80 @@ import hamburger from "assets/hamburger.svg"
 import rightArrow from "assets/right-arrow.svg"
 import leftArrow from "assets/left-arrow.svg"
 import { useState } from "react";
-import { DropdownEntry, subjectsItems, regularItems, isTextInComplexDropdown } from "./navbarLinks";
+import { DropdownEntry, NavbarItem, isComplexDropdownMenu, isDropdownMenu, isSimpleNavbarItem, mainItems } from "./navbarLinks";
 import DropdownItem from "./DropdownItem";
 import LogoBar from "components/logoBar"
 import { redirect } from "utils/helpers"
 
-const ExpandedNavbarItem = ({ text, clicked }: { text: string, clicked: (category: string) => void }) => {
-    let redirectUrl = "";
-    if (!isTextInComplexDropdown(text)) {
-        const menu = regularItems[text];
-        redirectUrl = menu.redirect;
-    }
-
+const ExpandedNavbarItem = ({ text, redirectUrl, clicked }: { text: string, redirectUrl: string | undefined, clicked: (category: string) => void }) => {
     return (
         <div className="expanded-navbar-item-wrapper" onClick={() => clicked(text)}>
             <p className="expanded-navbar-item-text">{text}</p>
-            {redirectUrl == "" && <img src={rightArrow} className="expanded-navbar-item-arrow-image"></img>}
+            {redirectUrl == undefined && <img src={rightArrow} className="expanded-navbar-item-arrow-image"></img>}
         </div>
     );
 };
 
 interface ExpandedNavbarState {
-    // we have a single complex dropdown...
-    isComplex: boolean,
-    isTopmost: boolean,
-    subcategory: string | undefined
+    prev: ExpandedNavbarState | undefined
+    current: NavbarItem | undefined
 }
 
 const ExpandedNavbar = ({ close }: { close: () => void }) => {
     let initialState: ExpandedNavbarState = {
-        isComplex: false,
-        isTopmost: true,
-        subcategory: undefined
+        prev: undefined,
+        current: undefined
     };
 
     let [state, setState] = useState(initialState);
 
     const itemClick = (text: string) => {
-        let redirectUrl = "";
-        if (!isTextInComplexDropdown(text)) {
-            const menu = regularItems[text];
-            redirectUrl = menu.redirect;
+        const curr = state.current;
+
+        let newState: ExpandedNavbarState | undefined = undefined;
+        if (curr == undefined) {
+            // topmost
+            const item = mainItems.items.filter((i) => i.text == text)[0];
+            if (isSimpleNavbarItem(item)) {
+                redirect(item.redirect);
+                newState = state;
+            } else {
+                newState = {
+                    prev: state,
+                    current: item
+                }
+            }
+        } else if (isComplexDropdownMenu(curr)) {
+            const subcategory = curr.subcategories.filter((s) => s.text == text)[0];
+            newState = {
+                prev: state,
+                current: subcategory
+            }
         }
 
-        if (redirectUrl != "") {
-            redirect(redirectUrl);
+        if (newState == undefined)
             return;
-        }
-
-        const newState: ExpandedNavbarState = {
-            isComplex: false,
-            isTopmost: false,
-            subcategory: undefined
-        };
-
-        if (text == "Subjects") {
-            newState.isComplex = true;
-        } else {
-            if (!state.isTopmost)
-                newState.isComplex = true;
-
-            newState.subcategory = text;
-        }
 
         setState(newState);
     };
 
     const back = () => {
-        const newState: ExpandedNavbarState = {
-            isComplex: false,
-            isTopmost: false,
-            subcategory: undefined
-        };
+        if (state.prev == undefined)
+            return;
 
-        if ((state.isComplex && state.subcategory == null) || (!state.isComplex && state.subcategory != null)) {
-            newState.isTopmost = true;
-        } else if (state.isComplex && state.subcategory != null) {
-            newState.isComplex = true;
-        }
-
-        setState(newState);
+        setState(state.prev);
     };
 
     const elements: JSX.Element[] = [];
     let isLinks = false;
 
-    const addNavbarItemsForSubcategories = (keys: string[]) => {
-        keys.forEach((key) => {
-            const element = <ExpandedNavbarItem text={key} clicked={itemClick} />
+    const addNavbarItemsForSubcategories = (items: NavbarItem[]) => {
+        items.forEach((item) => {
+            let redirect = undefined;
+            if (isSimpleNavbarItem(item))
+                redirect = item.redirect;
+
+            const element = <ExpandedNavbarItem text={item.text} redirectUrl={redirect} clicked={itemClick} />
             elements.push(element);
         });
     };
@@ -105,28 +91,16 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
         isLinks = true;
     };
 
-    if (state.isComplex) {
-        if (state.subcategory == undefined) {
-            // choosing subjects subcategory
-            const keys = Object.keys(subjectsItems);
-            addNavbarItemsForSubcategories(keys);
-        } else {
-            // choosing links
-            const links = subjectsItems[state.subcategory];
-            addNavbarLinks(links);
-        }
-    } else {
-        if (state.isTopmost) {
-            // choosing topmost subcategory
-            const keys = Object.keys(regularItems);
-            keys.splice(0, 0, "Subjects");
-            addNavbarItemsForSubcategories(keys);
-        } else if (state.subcategory != undefined) {
-            // ^ just make sure it's not undefined
+    if (state.prev == undefined) {
+        // is topmost
+        addNavbarItemsForSubcategories(mainItems.items);
+    } else if (state.current != undefined) {
+        const item = state.current;
 
-            // choosing topmost regular subcategory items
-            const menu = regularItems[state.subcategory];
-            addNavbarLinks(menu.items);
+        if (isDropdownMenu(item)) {
+            addNavbarLinks(item.items);
+        } else if (isComplexDropdownMenu(item)) {
+            addNavbarItemsForSubcategories(item.subcategories);
         }
     }
 
@@ -140,7 +114,7 @@ const ExpandedNavbar = ({ close }: { close: () => void }) => {
     return (
         <div className="expanded-navbar-wrapper">
             <div className="expanded-navbar-top-wrapper">
-                { !state.isTopmost && <img src={leftArrow} onClick={back} className="expanded-navbar-close-image"></img> }
+                { (state.prev != undefined) && <img src={leftArrow} onClick={back} className="expanded-navbar-close-image"></img> }
                 <img src={closeImg} onClick={close} className="expanded-navbar-close-image"></img>
             </div>
             <div className={bottomWrapperClass}>

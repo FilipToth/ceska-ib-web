@@ -1,17 +1,16 @@
 import "assets/navbar.css"
 import { useState } from "react";
-import { subjectsItems, regularItems, isTextInComplexDropdown } from "./navbarLinks";
 import DropdownItem from "./DropdownItem";
 import LogoBar from "components/logoBar";
 import { redirect } from "utils/helpers";
+import { ComplexDropdownMenu, DropdownMenu, NavbarItem, isComplexDropdownMenu, isDropdownMenu, isSimpleNavbarItem, mainItems } from "./navbarLinks";
 
-const DropdownMenu = ({ text, enter, leave }: { text: string, enter: () => void, leave: () => void }) => {
-    var menu = regularItems[text];
-    if (menu.items.length == 0)
+const DropdownMenu = ({ item, enter, leave }: { item: DropdownMenu, enter: () => void, leave: () => void }) => {
+    if (mainItems.items.length == 0)
         return <></>
 
     const elements: JSX.Element[] = [];
-    menu.items.forEach((item) => {
+    item.items.forEach((item) => {
         const element = <DropdownItem text={item.text} url={item.redirect} icon={item.icon} textColor="black" />
         elements.push(element);
     });
@@ -41,14 +40,16 @@ const ComplexDropdownSubcategory = ({ text, changeHandler, isSelected }: { text:
     );
 }
 
-const ComplexDropdownMenu = ({ enter, leave }: { enter: () => void, leave: () => void}) => {
-    const keys = Object.keys(subjectsItems);
-    const [category, setCategory] = useState(keys[0]);
+const ComplexDropdownMenu = ({ item, enter, leave }: { item: ComplexDropdownMenu, enter: () => void, leave: () => void}) => {
+    const subcategories = item.subcategories;
+    const subcategoryKeys = subcategories.map((s) => s.text);
+
+    const [category, setCategory] = useState(subcategoryKeys[0]);
     const changeContent = (cat: string) => {
         setCategory(cat);
     };
 
-    const itemsForCategory = subjectsItems[category]
+    const itemsForCategory = subcategories.filter((s) => s.text == category)[0].items;
     const dropDownElements: JSX.Element[] = [];
     itemsForCategory.forEach((item) => {
         const element = <DropdownItem text={item.text} url={item.redirect} icon={item.icon} textColor="black" />
@@ -56,7 +57,7 @@ const ComplexDropdownMenu = ({ enter, leave }: { enter: () => void, leave: () =>
     });
 
     const subcategoryElements: JSX.Element[] = [];
-    keys.forEach((key) => {
+    subcategoryKeys.forEach((key) => {
         const selected = key == category;
         const element = <ComplexDropdownSubcategory text={key} changeHandler={changeContent} isSelected={selected} />
         subcategoryElements.push(element);
@@ -76,15 +77,9 @@ const ComplexDropdownMenu = ({ enter, leave }: { enter: () => void, leave: () =>
     );
 };
 
-const NavbarItem = ({ text }: { text: string }) => {
+const NavbarItem = ({ item }: { item: NavbarItem }) => {
     const [mouseInNavbar, setMouseInNavbar] = useState(false);
     const [mouseInDropdown, setMouseInDropdown] = useState(false);
-
-    let redirectUrl = "";
-    if (!isTextInComplexDropdown(text)) {
-        const menu = regularItems[text];
-        redirectUrl = menu.redirect;
-    }
 
     const mouseEnter = () => {
         setMouseInNavbar(true);
@@ -102,6 +97,11 @@ const NavbarItem = ({ text }: { text: string }) => {
         setMouseInDropdown(false);
     };
 
+    let redirectUrl = "";
+    if (isSimpleNavbarItem(item)) {
+        redirectUrl = item.redirect;
+    }
+
     const textClick = () => {
         if (redirectUrl == "")
             return;
@@ -114,24 +114,26 @@ const NavbarItem = ({ text }: { text: string }) => {
         navbarTextClass += " navbar-text-clickable"
 
     const render = mouseInDropdown || mouseInNavbar;
-    const dropdown = text != "Subjects" ? <DropdownMenu text={text} enter={dropdownEnter} leave={dropdownLeave} />
-        : <ComplexDropdownMenu enter={dropdownEnter} leave={dropdownLeave} />;
+
+    let dropdown = undefined;
+    if (isDropdownMenu(item)) {
+        dropdown = <DropdownMenu item={item} enter={dropdownEnter} leave={dropdownLeave} />;
+    } else if (isComplexDropdownMenu(item)) {
+        dropdown = <ComplexDropdownMenu item={item} enter={dropdownEnter} leave={dropdownLeave} />;
+    }
 
     return (
         <div onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className="navbar-item-wrapper">
-            <p className={navbarTextClass} onClick={textClick}>{text}</p>
+            <p className={navbarTextClass} onClick={textClick}>{item.text}</p>
             {render && dropdown }
         </div>
     );
 };
 
 const Navbar = () => {
-    const keys = Object.keys(regularItems);
-    keys.splice(1, 0, "Subjects");
-
     const elements: JSX.Element[] = [];
-    keys.forEach((key) => {
-        const element = <NavbarItem text={key} />
+    mainItems.items.forEach((item) => {
+        const element = <NavbarItem item={item} />
         elements.push(element);
     });
 
