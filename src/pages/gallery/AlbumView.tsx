@@ -5,6 +5,8 @@ import Footer from "components/Footer";
 import GalleryHeader from "components/gallery/GalleryHeader";
 
 const AlbumView = () => {
+    const gradient = ["#14B5EB", "#D226E1"];
+
     return (
         <div className="album-view-parent-wrapper">
             <GalleryHeader rightText="Ceska 10 IB - Albums" showGoBack={false} />
@@ -13,7 +15,7 @@ const AlbumView = () => {
                     return <Album album={album} />
                 })}
             </div>
-            <Footer />
+            <Footer gradient={gradient} />
         </div>
     )
 };

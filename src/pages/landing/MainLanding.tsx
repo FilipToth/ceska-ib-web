@@ -24,8 +24,13 @@ const navbarItems: NavbarItems = {
                 { text: "Assessment Policy", redirect: "other/assessment-policy.pdf", icon: "icons/document.png" },
                 { text: "Inclusion Policy", redirect: "other/inclusion-policy.pdf", icon: "icons/document.png" },
                 { text: "Language Policy", redirect: "other/language-policy.pdf", icon: "icons/document.png" },
-                { text: "Org Chart", redirect: "other/org-chart.jpg", icon: "icons/document.png" }
+                { text: "Org Chart", redirect: "other/org-chart.jpg", icon: "icons/document.png" },
+                { text: "Mission & Vision Statement", redirect: "other/mission-vision.pdf", icon: "icons/document.png" }
             ]
+        },
+        {
+            text: "International Cooperation",
+            redirect: "other/international-cooperation.pdf"
         },
         {
             text: "Gallery",

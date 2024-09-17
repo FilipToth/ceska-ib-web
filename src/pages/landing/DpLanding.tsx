@@ -122,7 +122,7 @@ const DpLanding = () => {
             <LandingPageSubsection heading={thirdHeading} subheading={thirdSubheading} rightImage={whyCeska} btnText={undefined} onClick={undefined} btnGradient={gradient} />
             <Footer gradient={gradient} />
         </>
-    )
+    );
 };
 
 export default DpLanding;

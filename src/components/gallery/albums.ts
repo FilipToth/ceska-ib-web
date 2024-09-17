@@ -61,6 +61,40 @@ const albums: AlbumEntry[] = [
             "IMG_8397.png",
             "IMG_8400.png"
         ]
+    },
+    {
+        id: "1",
+        name: "Our School",
+        description: ":D",
+        itemsParentDir: "album-photos/our-school/original/",
+        thumbsParentDir: "album-photos/our-school/thumbs/",
+        lowParentDir: "album-photos/our-school/low/",
+        midParentDir: "album-photos/our-school/mid/",
+        highParentDir: "album-photos/our-school/high/",
+        items: [
+            "Image-1.jpeg",
+            "Image.jpeg",
+            "IMG20220203123732.jpg",
+            "IMG20220203124143.jpg",
+            "IMG20220202093739.jpg",
+            "IMG20220202092837 (1).jpg",
+            "IMG20220202093540.jpg",
+            "IMG20220203123750.jpg",
+            "IMG20220203123637.jpg",
+            "IMG_3956-2.jpg",
+            "IMG20220202092713.jpg",
+            "IMG20220202092837.jpg",
+            "IMG20220202092749.jpg",
+            "IMG20220202092833.jpg",
+            "IMG20220203123814.jpg",
+            "IMG20220202145900.jpg",
+            "IMG20220202093817.jpg",
+            "IMG20220202093457.jpg",
+            "IMG20220202100405.jpg",
+            "IMG20220202092605.jpg",
+            "IMG20220202092625.jpg",
+            "IMG20220202100421.jpg"
+        ]
     }
 ];
 

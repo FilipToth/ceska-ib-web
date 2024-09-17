@@ -11,6 +11,8 @@ interface AlbumVisualInfo {
 }
 
 const Gallery = () => {
+    const gradient = ["#FF2339", "#D226E1"];
+
     const getAlbumItems = (album: AlbumEntry) => {
         const windowWidth = window.innerWidth;
 
@@ -66,7 +68,7 @@ const Gallery = () => {
                     </Masonry>
                 </ResponsiveMasonry>
             </div>
-            <Footer />
+            <Footer gradient={gradient} />
         </div>
     );
 };

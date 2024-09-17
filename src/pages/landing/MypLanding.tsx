@@ -10,10 +10,6 @@ import ThreeJs from "./ThreeJs"
 const navbarItems: NavbarItems = {
     items: [
         {
-            text: "Our Vision",
-            redirect: "other/myp-mission-statement.pdf"
-        },
-        {
             text: "IB Learner Profile",
             redirect: "other/learner-profile.pdf"
         },
