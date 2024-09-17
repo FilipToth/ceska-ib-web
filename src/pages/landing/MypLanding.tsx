@@ -14,10 +14,6 @@ const navbarItems: NavbarItems = {
             redirect: "other/myp-mission-statement.pdf"
         },
         {
-            text: "International Cooperation",
-            redirect: ""
-        },
-        {
             text: "IB Learner Profile",
             redirect: "other/learner-profile.pdf"
         },

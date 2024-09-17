@@ -26,7 +26,7 @@ const LandingPageMainSubsection = ({ heading, subheading, btnText, btnClick, rig
     };
 
     return (
-        <div className="landing-wrapper">
+        <div className="landing-wrapper-main">
             <canvas id={gradientId} width="203" data-transition-in data-js-darken-top></canvas>
             { !isMobileNavbar && <Navbar items={navbarItems} /> }
             { isMobileNavbar && <MobileNavbar items={navbarItems} /> }

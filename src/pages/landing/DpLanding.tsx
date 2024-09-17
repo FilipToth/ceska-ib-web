@@ -73,7 +73,7 @@ const navbarItems: NavbarItems = {
                 { text: "Admissions Policy", redirect: "other/admissions-policy.pdf", icon: "icons/document.png" },
                 { text: "Admissions Process Info", redirect: "other/admissions-process-info.pdf", icon: "icons/document.png" },
                 { text: "Admissions Announcement", redirect: "other/admissions-announcement.pdf", icon: "icons/document.png" },
-                { text: "Tuition", redirect: "other/tuition.pdf", icon: "icons/document.png" },
+                { text: "School Fees", redirect: "other/school-fees.pdf", icon: "icons/document.png" },
                 { text: "Application English", redirect: "other/application-english.pdf", icon: "icons/document.png" },
                 { text: "Applicaton Slovak", redirect: "other/application-slovak.pdf", icon: "icons/document.png" },
                 { text: "Sample Test - MATH", redirect: "other/sample-test-math.pdf", icon: "icons/math-aa.svg" },

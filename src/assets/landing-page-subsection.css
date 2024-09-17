@@ -10,7 +10,7 @@
     background-color: #f9f8f8;
 
     position: relative;
-    min-height: 100%;
+    padding: 3vh 0vw;
 }
 
 .landing-subpage-layout {
@@ -28,7 +28,6 @@
     padding: 0;
 
     width: 100vw;
-    min-height: 100vh;
 }
 
 .landing-subpage-left-wrapper {
@@ -101,7 +100,6 @@
 @media all and (max-width: 1000px) {
     .landing-wrapper {
         height: auto;
-        min-height: 100vh;
     }
 
     .landing-subpage-layout {

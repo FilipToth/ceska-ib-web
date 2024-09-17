@@ -4,13 +4,30 @@ html, body {
     padding: 0;
 }
 
+.landing-wrapper-main {
+    /* landing */
+
+    max-width: 100vw;
+    width: 100vw;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #f9f8f8;
+
+    position: relative;
+    min-height: 100vh;
+}
+
 #gradient-canvas-main {
     position: absolute;
+    z-index: 1;
 
     width: 100%;
     height: 58vh;
     clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 100%);
     margin: 0;
+
     /* background: linear-gradient(92.43deg, #14B5EB 18.51%, #D226E1 51.06%); */
     /* transform: rotate(-17.5deg); */
 
@@ -22,6 +39,7 @@ html, body {
 
 #gradient-canvas-myp {
     position: absolute;
+    z-index: 1;
 
     width: 100%;
     height: 58vh;
@@ -38,6 +56,7 @@ html, body {
 
 #gradient-canvas-dp {
     position: absolute;
+    z-index: 1;
 
     width: 100%;
     height: 58vh;
@@ -54,6 +73,7 @@ html, body {
 
 .info-wrapper {
     /* Info-Wrapper */
+    z-index: 2;
 
     /* Auto layout */
     display: flex;
