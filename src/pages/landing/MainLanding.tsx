@@ -1,11 +1,11 @@
 import whyCeska from "assets/why-ceska-main.svg"
 import ibDescription from "assets/ib-description-main.svg"
 import Footer from "../../components/Footer"
-import Triangle from "./Triangle"
 import { redirect } from "utils/helpers"
 import LandingPageSubsection from "./LandingPageSubsection"
 import LandingPageMainSubsection from "./LandingPageMainSubsection"
 import { NavbarItems } from "components/navbar/navbarLinks"
+import ThreeJs from "./ThreeJs"
 
 const navbarItems: NavbarItems = {
     items: [
@@ -43,6 +43,10 @@ const MainLanding = () => {
         redirect("other/ib-history.pdf");
     };
 
+    const redirects = {};
+    const object = "3d/low_poly_earth.glb";
+    const three = <ThreeJs path={object} redirects={redirects} />;
+
     const gradientId = "gradient-canvas-main"
     const gradient = ["#FF2339", "#D226E1"];
 
@@ -57,7 +61,7 @@ const MainLanding = () => {
 
     return (
         <>
-            <LandingPageMainSubsection heading={firstHeading} subheading={firstSubheading} btnText="About the IB" btnClick={aboutIBClick} rightObject={<Triangle />} navbarItems={navbarItems} gradientId={gradientId} btnGradient={gradient} />
+            <LandingPageMainSubsection heading={firstHeading} subheading={firstSubheading} btnText="About the IB" btnClick={aboutIBClick} rightObject={three} navbarItems={navbarItems} gradientId={gradientId} btnGradient={gradient} />
             <LandingPageSubsection heading={secondHeading} subheading={secondSubheading} rightImage={ibDescription} btnText="History of the IB" onClick={ibHistoryClick} btnGradient={gradient} />
             <LandingPageSubsection heading={thirdHeading} subheading={thirdSubheading} rightImage={whyCeska} btnText={undefined} onClick={undefined} btnGradient={gradient} />
             <Footer gradient={gradient} />

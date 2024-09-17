@@ -3,15 +3,11 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import * as TWEEN from '@tweenjs/tween.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader';
+import { MTLLoader } from 'three/addons/loaders/MTLLoader'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { getFirstIntersection } from "../../utils/raycastHelpers";
 import { redirect } from "../../utils/helpers"
-
-const redirects = {
-    "001": "other/cas-handbook.pdf",
-    "002": "other/ee.pdf",
-    "003": "other/tok.pdf",
-};
 
 const getIDFromMeshName = (name) => {
     let id = "";
@@ -26,7 +22,7 @@ const getIDFromMeshName = (name) => {
     return id;
 };
 
-const Triangle = () => {
+const ThreeJs = ({ path, redirects }) => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -62,15 +58,15 @@ const Triangle = () => {
         const light = new THREE.AmbientLight(0x404040, 60);
         scene.add(light);
 
-        let loader = new GLTFLoader();
-        loader.load("triangle.glb", (gltf) => {
+        const gltfLoader = new GLTFLoader();
+        gltfLoader.load(path, (gltf) => {
             scene.add(gltf.scene);
         }, undefined, (err) => {
-            console.log(err)
+            console.log(err);
         });
 
-        let currentAnims = {};
-        let returningAnims = [];
+        const currentAnims = {};
+        const returningAnims = [];
 
         const tweenReturnedToStart = (id) => {
             delete currentAnims[id];
@@ -161,6 +157,9 @@ const Triangle = () => {
             const id = getIDFromMeshName(name);
 
             const url = redirects[id];
+            if (url == undefined)
+                return;
+
             redirect(url);
         };
 
@@ -203,4 +202,4 @@ const Triangle = () => {
     );
 };
 
-export default Triangle;
+export default ThreeJs;
