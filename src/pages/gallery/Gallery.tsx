@@ -36,9 +36,8 @@ const Gallery = () => {
         return items;
     }
 
-    const getAlbumInfo = () => {
-        const [queryParams] = useSearchParams();
-        const id = queryParams.get('id');
+    const getAlbumInfo = (params: URLSearchParams) => {
+        const id = params.get('id');
 
         const empty: AlbumVisualInfo = { name: '', items: [] };
         if (id == null)
@@ -54,7 +53,8 @@ const Gallery = () => {
         return info;
     };
 
-    const info = getAlbumInfo();
+    const [queryParams] = useSearchParams();
+    const info = getAlbumInfo(queryParams);
 
     return (
         <div className="gallery-view-parent-wrapper">

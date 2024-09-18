@@ -24,12 +24,12 @@ interface ExpandedNavbarState {
 }
 
 const ExpandedNavbar = ({ items, close }: { items: NavbarItems, close: () => void }) => {
-    let initialState: ExpandedNavbarState = {
+    const initialState: ExpandedNavbarState = {
         prev: undefined,
         current: undefined
     };
 
-    let [state, setState] = useState(initialState);
+    const [state, setState] = useState(initialState);
 
     const itemClick = (text: string) => {
         const curr = state.current;

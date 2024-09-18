@@ -15,7 +15,7 @@ const LandingPageMainSubsection = ({ heading, subheading, btnText, btnClick, rig
 
     useEffect(() => {
         initGradient(`#${gradientId}`);
-    }, []);
+    }, [gradientId]);
 
     if (btnGradient.length != 2)
         btnGradient = ["#14B5EB", "#D226E1"];
