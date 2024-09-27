@@ -46,25 +46,28 @@ const Footer = ({ gradient }: { gradient: string[] }) => {
                     </div>
                 </div> */}
                 <div className="footer-bottom-wrapper" style={style}>
-                    <div>
-                        <p className="school-name-text">© 2024 Súkromné Gymnázium Česká 10</p>
-                        <div className="footer-contact-list-wrapper">
-                            <div className="footer-contact-wrapper">
-                                <img className="contact-icon" src={emailIcon}></img>
-                                <p className="school-name-subtext">Head of School: juraj.babic@gymnaziumceska.sk</p>
-                            </div>
-                            <div className="footer-contact-wrapper">
-                                <img className="contact-icon" src={emailIcon}></img>
-                                <p className="school-name-subtext">IBDP Coordinator: sveta.fedoseeva@gmail.com</p>
-                            </div>
-                            <div className="footer-contact-wrapper">
-                                <img className="contact-icon" src={phoneIcon}></img>
-                                <p className="school-name-subtext">+421 904 979 681</p>
+                    <div className="footer-bottom-vertical-split">
+                        <div>
+                            <div className="footer-contact-list-wrapper">
+                                <div className="footer-contact-wrapper">
+                                    <img className="contact-icon" src={emailIcon}></img>
+                                    <p className="school-name-subtext">Head of School: juraj.babic@gymnaziumceska.sk</p>
+                                </div>
+                                <div className="footer-contact-wrapper">
+                                    <img className="contact-icon" src={emailIcon}></img>
+                                    <p className="school-name-subtext">IBDP Coordinator: sveta.fedoseeva@gmail.com</p>
+                                </div>
+                                <div className="footer-contact-wrapper">
+                                    <img className="contact-icon" src={phoneIcon}></img>
+                                    <p className="school-name-subtext">+421 904 979 681</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="footer-bottom-right-wrapper">
                         <LogoBar wrapperStyle={{}} />
+                    </div>
+                    <div className="footer-bottom-copyright-wrapper">
+                        <p className="school-name-text">© 2024 Súkromné Gymnázium Česká 10</p>
+                        <p className="school-name-text">Designed by IB DP Students</p>
                     </div>
                 </div>
             </div>
