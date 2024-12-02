@@ -3,15 +3,15 @@ const MID_WIDTH = 750;
 const HIGH_WIDTH = 1300;
 
 interface AlbumEntry {
-    id: string,
-    name: string,
-    description: string,
-    itemsParentDir: string,
-    thumbsParentDir: string,
-    lowParentDir: string,
-    midParentDir: string,
-    highParentDir: string,
-    items: string[]
+    id: string;
+    name: string;
+    description: string;
+    itemsParentDir: string;
+    thumbsParentDir: string;
+    lowParentDir: string;
+    midParentDir: string;
+    highParentDir: string;
+    items: string[];
 }
 
 const albums: AlbumEntry[] = [
@@ -59,8 +59,8 @@ const albums: AlbumEntry[] = [
             "IMG_8394.png",
             "IMG_8395.png",
             "IMG_8397.png",
-            "IMG_8400.png"
-        ]
+            "IMG_8400.png",
+        ],
     },
     {
         id: "1",
@@ -93,9 +93,30 @@ const albums: AlbumEntry[] = [
             "IMG20220202100405.jpg",
             "IMG20220202092605.jpg",
             "IMG20220202092625.jpg",
-            "IMG20220202100421.jpg"
-        ]
-    }
+            "IMG20220202100421.jpg",
+        ],
+    },
+    {
+        id: "2",
+        name: "International Workshop: Milano - Bratislava",
+        description:
+            "The IB DP students collaborated with the students from Milan, Italy and Slovakia, and researched the Atomic Power perspectives. They met at Sukromne gymnazium Ceska in Bratislava, Slovakia, where they presented their outcomes during the workshop.",
+        itemsParentDir: "album-photos/milano/original/",
+        thumbsParentDir: "album-photos/milano/thumbs/",
+        lowParentDir: "album-photos/milano/low/",
+        midParentDir: "album-photos/milano/mid/",
+        highParentDir: "album-photos/milano/high/",
+        items: [
+            "IMG_2437.JPG",
+            "IMG_2438.JPG",
+            "IMG_2439.JPG",
+            "IMG_2435.JPG",
+            "IMG_2441.JPG",
+            "IMG_2443.JPG",
+            "IMG_2442.JPG",
+            "IMG_2440.JPG",
+        ],
+    },
 ];
 
 export { albums, type AlbumEntry, LOW_WIDTH, MID_WIDTH, HIGH_WIDTH };
