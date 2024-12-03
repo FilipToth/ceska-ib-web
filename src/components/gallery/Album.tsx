@@ -1,17 +1,8 @@
 import "assets/album.css"
 import { AlbumEntry } from "./albums";
-import { ReactElement } from "react";
 import { redirect } from "utils/helpers";
 
 const Album = ({ album }: { album: AlbumEntry }) => {
-    // just render the first 12 elements..
-    const images: ReactElement[] = [];
-    album.items.splice(0, 12).forEach(item => {
-        const path = album.thumbsParentDir + item;
-        const image = <img className="album-cover-image" src={path}></img>
-        images.push(image);
-    });
-
     const albumClick = () => {
         redirect(`/gallery?id=${album.id}`);
     };
@@ -25,7 +16,11 @@ const Album = ({ album }: { album: AlbumEntry }) => {
                 </div>
             </div>
             <div className="album-images-wrapper">
-                { images }
+                { album.items.slice(0, 12).map((item) => {
+                    const path = album.thumbsParentDir + item;
+                    const image = <img className="album-cover-image" src={path} key={item}></img>
+                    return image;
+                }) }
             </div>
         </div>
     )

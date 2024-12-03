@@ -12,7 +12,8 @@ const AlbumView = () => {
             <GalleryHeader rightText="Ceska 10 IB - Albums" showGoBack={false} />
             <div className="album-view-wrapper">
                 { albums.map((album) => {
-                    return <Album album={album} />
+                    console.log(album);
+                    return <Album album={album} key={album.id} />
                 })}
             </div>
             <Footer gradient={gradient} />
