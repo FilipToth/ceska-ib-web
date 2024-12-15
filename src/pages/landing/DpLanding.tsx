@@ -158,7 +158,7 @@ const navbarItems: NavbarItems = {
             text: "Apply Now",
             items: [
                 {
-                    text: "Admissions Criteria",
+                    text: "Handbook for Parents - Slovak",
                     redirect: "other/admissions-criteria.pdf",
                     icon: "icons/document.png",
                 },
@@ -173,7 +173,7 @@ const navbarItems: NavbarItems = {
                     icon: "icons/document.png",
                 },
                 {
-                    text: "Admissions Announcement",
+                    text: "Dates & Schedule of Entrance Exams",
                     redirect: "other/admissions-announcement.pdf",
                     icon: "icons/document.png",
                 },
@@ -188,7 +188,7 @@ const navbarItems: NavbarItems = {
                     icon: "icons/document.png",
                 },
                 {
-                    text: "Applicaton Slovak",
+                    text: "Application Slovak",
                     redirect: "other/application-slovak.pdf",
                     icon: "icons/document.png",
                 },
