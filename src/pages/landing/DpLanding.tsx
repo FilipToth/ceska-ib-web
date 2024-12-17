@@ -178,11 +178,6 @@ const navbarItems: NavbarItems = {
                     icon: "icons/document.png",
                 },
                 {
-                    text: "School Fees",
-                    redirect: "other/school-fees.pdf",
-                    icon: "icons/document.png",
-                },
-                {
                     text: "Application English",
                     redirect: "other/application-english.pdf",
                     icon: "icons/document.png",
